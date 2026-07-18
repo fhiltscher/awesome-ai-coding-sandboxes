@@ -165,7 +165,7 @@ Related but not untrusted-code sandboxes for coding agents:
 
 ## Contributing
 
-PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing your PR). See [`CONTRIBUTING.md`](CONTRIBUTING.md). Maintained by `@handle` — set the maintainer's GitHub handle before publishing.
+PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing your PR). See [`CONTRIBUTING.md`](CONTRIBUTING.md). Maintained by [@fhiltscher](https://github.com/fhiltscher).
 
 - One project per PR. Every matrix cell needs a **source link** (official docs/repo). Don't know a value? Use `?` — never guess.
 - Entries must run agent-generated code with a real isolation boundary; no dead projects, no marketing-only pages. License is not a criterion.
