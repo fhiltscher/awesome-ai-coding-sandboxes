@@ -54,4 +54,4 @@ We review and merge **as time allows** — there's no fixed schedule and no bot 
 
 ## License of contributions
 
-By contributing, you agree your additions are released under the list's content license (**[CC0-1.0 / CC-BY-4.0 — TBD]**).
+By contributing, you agree your additions are released under the list's content license, [CC0-1.0](LICENSE).
