@@ -25,7 +25,7 @@ _Last updated: 2026-07-19 · Actively maintained — PRs welcome._
 **Secrets** = `brokered` (creds kept OUT via proxy) vs `env-in` (injected). Sorted by isolation tier, then egress strength.
 **Abbrev.:** eph = ephemeral · pers = persistent · Prop. = proprietary.
 
-| Project                                                                      | Isolation                             | Egress control                | Secrets                     | Self-host / Managed     | Persistence  | License    |
+| Project                                                                      | Isolation                             | Egress control                | Secrets                     | Self-host / Managed     | State        | License    |
 | ---------------------------------------------------------------------------- | ------------------------------------- | ----------------------------- | --------------------------- | ----------------------- | ------------ | ---------- |
 | [Cleanroom](https://github.com/buildkite/cleanroom)                          | Firecracker µVM                       | **deny-default**              | brokered                    | Self-host               | eph          | MIT        |
 | [smolvm (smol-machines)](https://github.com/smol-machines/smolvm)            | libkrun µVM                           | **deny-default**              | brokered                    | Self-host               | both         | Apache     |
