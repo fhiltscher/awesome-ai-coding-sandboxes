@@ -1,5 +1,3 @@
-<!-- SEED für `CONTRIBUTING.md` des Repos `awesome-ai-coding-sandboxes`. -->
-
 # Contributing
 
 Thanks for helping keep this list accurate and useful. The whole point of this list is that **every claim is sourced and every PR is actually reviewed** — unlike the abandoned lists it improves on. Please help us keep that bar.
