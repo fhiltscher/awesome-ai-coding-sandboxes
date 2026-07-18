@@ -62,7 +62,7 @@ _Last updated: 2026-07-19 · Actively maintained — PRs welcome._
 | [Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) | gVisor/Kata (pluggable)               | none (delegated)              | env-in                      | Self-host (Kubernetes)  | persistent               | Apache-2.0                          |
 | [OpenHands](https://github.com/OpenHands/OpenHands)                          | Container (Docker)                    | none                          | env-in                      | Both                    | ?                        | MIT                                 |
 
-### What the data shows (this is the differentiator)
+### What the data shows
 
 **Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, Baponi**; allowlist-default: **Sprites**. Roughly a dozen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
