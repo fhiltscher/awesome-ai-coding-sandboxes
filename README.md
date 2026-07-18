@@ -132,5 +132,7 @@ PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing y
 Maintained by [@handle]. Contributions welcome.
 
 ## License
-Content under [CC0-1.0 / CC-BY-4.0 — entscheiden].
+[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0)
+
+To the extent possible under law, the maintainers have waived all copyright and related or neighboring rights to this work ([CC0-1.0](LICENSE)).
 
