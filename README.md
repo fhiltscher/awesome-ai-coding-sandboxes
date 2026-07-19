@@ -16,7 +16,6 @@ _Last updated: 2026-07-19 · Actively maintained — PRs welcome._
 - [Filesystem & WebAssembly sandboxes](#filesystem--webassembly-sandboxes)
 - [Isolation building blocks](#isolation-building-blocks)
 - [Adjacent](#adjacent)
-- [Related lists](#related-lists)
 
 ## Comparison matrix
 
@@ -155,14 +154,6 @@ Related but not untrusted-code sandboxes for coding agents:
 - [agentbox (madarco)](https://github.com/madarco/agentbox) - Self-hosted CLI running coding agents in parallel (Docker+FUSE / cloud VM); dev-workflow tooling on off-the-shelf isolation. MIT.
 - [Giant Swarm Agent Platform](https://www.giantswarm.io/agent-platform) - Kubernetes-based agent governance/orchestration control plane (MCP); ships no dedicated untrusted-code sandbox.
 - [Fireactions](https://github.com/hostinger/fireactions) - GitHub-Actions runner orchestrator on Firecracker µVMs; no agent/sandbox API. Apache-2.0.
-
-## Related lists
-
-- [arjan/awesome-agent-sandboxes](https://github.com/arjan/awesome-agent-sandboxes)
-- [dloss/awesome-agent-sandboxes](https://github.com/dloss/awesome-agent-sandboxes)
-- [restyler/awesome-sandbox](https://github.com/restyler/awesome-sandbox)
-- [tizkovatereza/awesome-ai-sandboxes](https://github.com/tizkovatereza/awesome-ai-sandboxes)
-- [webcoyote/awesome-AI-sandbox](https://github.com/webcoyote/awesome-AI-sandbox)
 
 ## Contributing
 
