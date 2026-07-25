@@ -4,7 +4,7 @@
 
 AI coding agents run arbitrary, model-generated commands. The hard part isn't speed — it's the **security boundary** (isolation) and what the agent can still do through it (**network egress, secrets**), plus **durable workspace state** for long tasks. This list ranks on those, not boot-time benchmarks.
 
-_Last updated: 2026-07-19 · Actively maintained — PRs welcome._
+_Last updated: 2026-07-25 · Actively maintained — PRs welcome._
 
 ## Contents
 
@@ -36,6 +36,7 @@ _Last updated: 2026-07-19 · Actively maintained — PRs welcome._
 | [Superserve](https://superserve.ai)                                          | Firecracker µVM                       | configurable (allowlist)      | brokered   | Both                    | both         | Apache     |
 | [Islo](https://islo.dev)                                                     | Cloud Hypervisor µVM                  | configurable (allow/deny)     | brokered   | Both (BYOC)             | both         | Prop.      |
 | [Declaw](https://declaw.ai)                                                  | Firecracker µVM                       | configurable (allow/deny, L7) | brokered   | Both (BYOC)             | both         | Prop.      |
+| [OmniRun](https://omnirun.io)                                                | Firecracker µVM                       | configurable (allow/deny)     | env-in     | Both                    | eph          | Prop.      |
 | [Vercel Sandbox](https://github.com/vercel/sandbox)                          | Firecracker µVM                       | configurable (deny-all)       | brokered   | Managed                 | eph          | Prop.      |
 | [BoxLite](https://github.com/boxlite-ai/boxlite)                             | KVM/HVF µVM                           | configurable (allowlist)      | brokered   | Self-host               | pers         | Apache     |
 | [Blaxel](https://blaxel.ai)                                                  | µVM                                   | configurable (preview)        | brokered   | Managed                 | pers         | Prop.      |
@@ -66,11 +67,11 @@ _Last updated: 2026-07-19 · Actively maintained — PRs welcome._
 
 **Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, Baponi**; allowlist-default: **Sprites**. Roughly a dozen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
-**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Katakate, Sprites, Morph, Tensorlake, Box, OpenComputer, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands.
+**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Katakate, Sprites, Morph, Tensorlake, Box, OpenComputer, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
 
 **The strong-posture set** (µVM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos** — plus Superserve/Islo/Declaw on configurable egress. That's the bar to beat.
 
-**EU data-residency** is advertised by exactly one _managed_ entry (**Box (ascii.dev)** — DE/FI/FR). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can be run in the EU _by you_, but no vendor offers an EU-native/sovereign _managed_ service. Unaddressed across 35 providers.
+**EU data-residency** is offered by two _managed_ entries — **Box (ascii.dev)** (DE/FI/FR) and **OmniRun** (Hetzner/DE). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 36 providers.
 
 **Control-plane reachable from inside** (the "front desk" risk): Sprites documents an in-sandbox management API (reachable); Modal documents it is _not_. Others undocumented.
 
