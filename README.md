@@ -4,7 +4,7 @@
 
 AI coding agents run arbitrary, model-generated commands. The hard part isn't speed — it's the **security boundary** (isolation) and what the agent can still do through it (**network egress, secrets**), plus **durable workspace state** for long tasks. This list ranks on those, not boot-time benchmarks.
 
-_Last updated: 2026-07-25 · Actively maintained — PRs welcome._
+_Last updated: 2026-07-28 · Actively maintained — PRs welcome._
 
 ## Contents
 
@@ -42,6 +42,7 @@ _Last updated: 2026-07-25 · Actively maintained — PRs welcome._
 | [Blaxel](https://blaxel.ai)                                                  | µVM                                   | configurable (preview)        | brokered   | Managed                 | pers         | Prop.      |
 | [Qbox](https://qbox.sh)                                                      | Firecracker µVM                       | configurable                  | unverified | Self-host               | eph          | unverified |
 | [Katakate (k7)](https://github.com/Katakate/k7)                              | Kata+FC µVM (K3s)                     | configurable (allowlist)      | env-in     | Self-host               | eph          | Apache     |
+| [AgentENV](https://github.com/kvcache-ai/AgentENV)[^agentenv]                | Firecracker µVM                       | full-by-default (cfg)         | env-in     | Self-host               | both         | MIT        |
 | [Runloop](https://runloop.ai)                                                | VM + container                        | full-by-default (cfg)         | brokered   | Managed                 | pers         | Prop.      |
 | [E2B](https://e2b.dev)                                                       | Firecracker µVM                       | full-by-default (cfg)         | env-in     | Both                    | eph[^resume] | Apache     |
 | [Northflank](https://northflank.com)                                         | Kata+FC µVM                           | full-by-default               | env-in     | Both (BYOC)             | pers         | Prop.      |
@@ -67,13 +68,15 @@ _Last updated: 2026-07-25 · Actively maintained — PRs welcome._
 
 **Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, Baponi**; allowlist-default: **Sprites**. Roughly a dozen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
-**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Katakate, Sprites, Morph, Tensorlake, Box, OpenComputer, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
+**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Katakate, Sprites, Morph, Tensorlake, Box, OpenComputer, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
 
 **The strong-posture set** (µVM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos** — plus Superserve/Islo/Declaw on configurable egress. That's the bar to beat.
 
-**EU data-residency** is offered by two _managed_ entries — **Box (ascii.dev)** (DE/FI/FR) and **OmniRun** (Hetzner/DE). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 36 providers.
+**EU data-residency** is offered by two _managed_ entries — **Box (ascii.dev)** (DE/FI/FR) and **OmniRun** (Hetzner/DE). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 37 providers.
 
 **Control-plane reachable from inside** (the "front desk" risk): Sprites documents an in-sandbox management API (reachable); Modal documents it is _not_. Others undocumented.
+
+**Control-plane authentication:** AgentENV currently has no built-in API authorization. Its maintainers explicitly require deployment on a trusted network or behind an authorization proxy.
 
 ## Why security-posture-first
 
@@ -167,3 +170,4 @@ PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing y
 Released under [CC0-1.0](LICENSE) — public domain.
 
 [^resume]: E2B is ephemeral but supports pause/resume.
+[^agentenv]: AgentENV sources: [architecture](https://kvcache-ai.github.io/AgentENV/internals/architecture.html), [networking and persistence](https://kvcache-ai.github.io/AgentENV/concepts/sandboxes.html), [environment injection](https://kvcache-ai.github.io/AgentENV/concepts/templates.html), and [license](https://github.com/kvcache-ai/AgentENV/blob/main/LICENSE).
