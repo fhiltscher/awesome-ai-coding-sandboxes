@@ -39,6 +39,22 @@ This list lives or dies on accuracy. So:
 - **Persistence** — `ephemeral`, `persistent`, `both`, or `partial`.
 - **License** — SPDX id (e.g. `Apache-2.0`, `MIT`, `AGPL-3.0`) or `Proprietary`. Note if only the SDK/client is open (`Proprietary (SDK MIT)`).
 
+### Generated data
+
+The matrix also feeds the page's `ItemList` structured data via
+`_data/sandboxes.json`. It is generated — don't edit it by hand:
+
+```sh
+script/sandboxes-data.py
+```
+
+CI fails if it drifts from the README. To have it regenerate itself on every
+commit that touches the matrix, enable the repo's hooks once:
+
+```sh
+git config core.hooksPath .githooks
+```
+
 ## Reporting stale or wrong data
 
 Found an entry that's out of date or incorrect? **Open an issue or a PR.** Accuracy beats politeness — if a value has changed or was wrong, we want to fix it.
