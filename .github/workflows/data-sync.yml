@@ -1,0 +1,17 @@
+# The ItemList JSON-LD is built from _data/sandboxes.json, which is generated
+# from the README matrix. A PR that edits the matrix without regenerating would
+# ship schema that disagrees with the visible table — this catches that.
+name: data-sync
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 script/sandboxes-data.py --demo
+      - run: python3 script/sandboxes-data.py --check
