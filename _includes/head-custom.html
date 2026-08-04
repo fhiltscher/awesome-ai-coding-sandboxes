@@ -4,6 +4,14 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/png" />
 
+<!-- jekyll-seo-tag emits twitter:title/image but no twitter:description; X falls
+     back to og:description, other consumers of the card do not. -->
+<meta name="twitter:description" content="{{ page.description | default: site.description | smartify | xml_escape }}" />
+
+{% if page.url == '/' %}
+<!-- Homepage only: the graph describes the comparison matrix, so emitting it on
+     every page would duplicate the same @ids across URLs. Dates come from
+     _config.yml defaults (scope README.md), the same source as sitemap lastmod. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -16,8 +24,17 @@
       "url": "{{ '/' | absolute_url }}#comparison-matrix",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "keywords": ["AI coding agents","sandbox","microVM","Firecracker","gVisor","egress control","secrets brokering","isolation"],
-      "dateModified": "{{ site.time | date: '%Y-%m-%d' }}",
+      "datePublished": "{{ page.date_published | date: '%Y-%m-%d' }}",
+      "dateModified": "{{ page.last_modified_at | date: '%Y-%m-%d' }}",
       "isAccessibleForFree": true,
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "README.md (source of the comparison matrix)",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://raw.githubusercontent.com/{{ site.repository }}/main/README.md"
+        }
+      ],
       "variableMeasured": [
         {"@type": "PropertyValue", "name": "Isolation tier"},
         {"@type": "PropertyValue", "name": "Egress control"},
@@ -32,7 +49,10 @@
       "@type": "TechArticle",
       "@id": "{{ '/' | absolute_url }}#article",
       "headline": "Awesome AI Coding Sandboxes",
-      "dateModified": "{{ site.time | date: '%Y-%m-%d' }}",
+      "description": "{{ site.description | smartify | xml_escape }}",
+      "image": "{{ '/assets/og.png' | absolute_url }}",
+      "datePublished": "{{ page.date_published | date: '%Y-%m-%d' }}",
+      "dateModified": "{{ page.last_modified_at | date: '%Y-%m-%d' }}",
       "inLanguage": "en-US",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "author": {"@id": "https://github.com/fhiltscher#person"},
@@ -43,8 +63,10 @@
       "@type": "Person",
       "@id": "https://github.com/fhiltscher#person",
       "name": "Franz Hiltscher",
-      "url": "https://github.com/fhiltscher"
+      "url": "https://github.com/fhiltscher",
+      "knowsAbout": ["AI coding agents","sandbox isolation","microVMs","network egress control","secrets management"]
     }
   ]
 }
 </script>
+{% endif %}

@@ -4,6 +4,8 @@
 
 AI coding agents run arbitrary, model-generated commands. The hard part isn't speed — it's the **security boundary** (isolation) and what the agent can still do through it (**network egress, secrets**), plus **durable workspace state** for long tasks. This list ranks on those, not boot-time benchmarks.
 
+<!-- Keep this date in sync with last_modified_at in _config.yml — it drives
+     <lastmod> in sitemap.xml and dateModified in the JSON-LD graph. -->
 _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 
 ## Contents
@@ -161,7 +163,7 @@ Related but not untrusted-code sandboxes for coding agents:
 
 ## Contributing
 
-PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing your PR). See [`CONTRIBUTING.md`](CONTRIBUTING.md). Maintained by [@fhiltscher](https://github.com/fhiltscher).
+PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing your PR). See [`CONTRIBUTING.md`](CONTRIBUTING.md) and the [Code of Conduct](code-of-conduct.md). Maintained by [@fhiltscher](https://github.com/fhiltscher).
 
 - One project per PR. Every matrix cell needs a **source link** (official docs/repo). Don't know a value? Use `?` — never guess.
 - Entries must run agent-generated code with a real isolation boundary; no dead projects, no marketing-only pages. License is not a criterion.
