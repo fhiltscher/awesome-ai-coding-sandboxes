@@ -24,6 +24,15 @@ defaults:
         path: /assets/og.png
         alt: "Awesome AI Coding Sandboxes — 37 sandboxes compared by isolation, egress control and secrets handling"
 
+  # Contributor Covenant boilerplate — the same text sits on thousands of repos
+  # and says nothing about sandboxes. Out of the index and out of the sitemap so
+  # it stops diluting a two-page site. `noindex` is read by _includes/head-custom.html.
+  - scope:
+      path: "code-of-conduct.md"
+    values:
+      sitemap: false
+      noindex: true
+
   # Single source for the content date: feeds <lastmod> in sitemap.xml
   # (jekyll-sitemap) and dateModified/datePublished in the JSON-LD graph
   # (_includes/head-custom.html). Keep in sync with the "Last updated" line in
