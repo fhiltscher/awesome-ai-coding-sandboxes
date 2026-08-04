@@ -1,0 +1,685 @@
+[
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Cleanroom",
+      "url": "https://github.com/buildkite/cleanroom",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "deny-default egress control",
+        "brokered secrets",
+        "Self-host",
+        "ephemeral workspace"
+      ],
+      "license": "https://opensource.org/licenses/MIT"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "smolvm (smol-machines)",
+      "url": "https://github.com/smol-machines/smolvm",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "libkrun µVM isolation",
+        "deny-default egress control",
+        "brokered secrets",
+        "Self-host",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Leap0",
+      "url": "https://leap0.dev",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "deny-default (allowlist) egress control",
+        "brokered secrets",
+        "Both",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 4,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "InstaVM",
+      "url": "https://instavm.io",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "deny-default (allowlist) egress control",
+        "brokered secrets",
+        "Both",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 5,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Mitos",
+      "url": "https://mitos.run",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM (Kubernetes) isolation",
+        "deny-default egress control",
+        "brokered secrets",
+        "Both",
+        "persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 6,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Sprites (Fly.io)",
+      "url": "https://fly.io/sprites",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "allowlist egress control",
+        "env-in secrets",
+        "Managed",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 7,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "microsandbox",
+      "url": "https://github.com/superradcompany/microsandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "libkrun µVM isolation",
+        "configurable (deny opt.) egress control",
+        "brokered secrets",
+        "Self-host (+cloud beta)",
+        "persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 8,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Superserve",
+      "url": "https://superserve.ai",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "configurable (allowlist) egress control",
+        "brokered secrets",
+        "Both",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 9,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Islo",
+      "url": "https://islo.dev",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Cloud Hypervisor µVM isolation",
+        "configurable (allow/deny) egress control",
+        "brokered secrets",
+        "Both (BYOC)",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 10,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Declaw",
+      "url": "https://declaw.ai",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "configurable (allow/deny, L7) egress control",
+        "brokered secrets",
+        "Both (BYOC)",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 11,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "OmniRun",
+      "url": "https://omnirun.io",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "configurable (allow/deny) egress control",
+        "env-in secrets",
+        "Both",
+        "ephemeral workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 12,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Vercel Sandbox",
+      "url": "https://github.com/vercel/sandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "configurable (deny-all) egress control",
+        "brokered secrets",
+        "Managed",
+        "ephemeral workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 13,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "BoxLite",
+      "url": "https://github.com/boxlite-ai/boxlite",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "KVM/HVF µVM isolation",
+        "configurable (allowlist) egress control",
+        "brokered secrets",
+        "Self-host",
+        "persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 14,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "OpenComputer",
+      "url": "https://opencomputer.dev",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "KVM full VM isolation",
+        "configurable (allowlist, L7) egress control",
+        "brokered secrets",
+        "Both",
+        "persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 15,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Blaxel",
+      "url": "https://blaxel.ai",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "µVM isolation",
+        "configurable (preview) egress control",
+        "brokered secrets",
+        "Managed",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 16,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Qbox",
+      "url": "https://qbox.sh",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "configurable egress control",
+        "unverified secrets",
+        "Self-host",
+        "ephemeral workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 17,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Katakate (k7)",
+      "url": "https://github.com/Katakate/k7",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Kata+FC µVM (K3s) isolation",
+        "configurable (allowlist) egress control",
+        "env-in secrets",
+        "Self-host",
+        "ephemeral workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 18,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "AgentENV",
+      "url": "https://github.com/kvcache-ai/AgentENV",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "full-by-default (cfg) egress control",
+        "env-in secrets",
+        "Self-host",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://opensource.org/licenses/MIT"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 19,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Freestyle",
+      "url": "https://freestyle.sh",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Full VM/KVM isolation",
+        "configurable (on/off) egress control",
+        "unverified secrets",
+        "Managed",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 20,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Runloop",
+      "url": "https://runloop.ai",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "VM + container isolation",
+        "full-by-default (cfg) egress control",
+        "brokered secrets",
+        "Managed",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 21,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "E2B",
+      "url": "https://e2b.dev",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "full-by-default (cfg) egress control",
+        "env-in secrets",
+        "Both",
+        "ephemeral workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 22,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Northflank",
+      "url": "https://northflank.com",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Kata+FC µVM isolation",
+        "full-by-default egress control",
+        "env-in secrets",
+        "Both (BYOC)",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 23,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Arrakis",
+      "url": "https://github.com/abshkbh/arrakis",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Cloud Hypervisor µVM isolation",
+        "full-by-default egress control",
+        "env-in secrets",
+        "Self-host",
+        "persistent workspace"
+      ],
+      "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 24,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "SmolVM (Celesto AI)",
+      "url": "https://github.com/CelestoAI/SmolVM",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker+QEMU µVM isolation",
+        "full-by-default (allowlist) egress control",
+        "env-in secrets",
+        "Self-host",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 25,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Morph",
+      "url": "https://morph.so",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "µVM (VMM n/s) isolation",
+        "full-by-default egress control",
+        "env-in secrets",
+        "Both",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 26,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Tensorlake",
+      "url": "https://tensorlake.ai",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker+CH µVM isolation",
+        "full-by-default (allow/deny) egress control",
+        "env-in secrets",
+        "Both (BYOC)",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 27,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Box (ascii.dev)",
+      "url": "https://box.ascii.dev",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Linux VM isolation",
+        "full-by-default egress control",
+        "env-in secrets",
+        "Managed",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 28,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Novita",
+      "url": "https://novita.ai/sandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "full-by-default egress control",
+        "unverified secrets",
+        "Managed",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 29,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Baponi",
+      "url": "https://baponi.ai",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Container (seccomp+cgroups, zero-cap) isolation",
+        "deny-default egress control",
+        "brokered secrets",
+        "Both",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 30,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "OpenSandbox",
+      "url": "https://github.com/alibaba/OpenSandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Container (opt. gVisor/Kata/FC) isolation",
+        "configurable (deny avail.) egress control",
+        "brokered secrets",
+        "Self-host",
+        "ephemeral workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 31,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Cloudflare Sandboxes",
+      "url": "https://developers.cloudflare.com/sandbox/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "VM-backed container isolation",
+        "configurable (deny avail.) egress control",
+        "brokered secrets",
+        "Managed",
+        "ephemeral and persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 32,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Daytona",
+      "url": "https://daytona.io",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Container (ded. kernel) isolation",
+        "configurable (tier-gated) egress control",
+        "brokered secrets",
+        "Both",
+        "persistent workspace"
+      ],
+      "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 33,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "AIO Sandbox",
+      "url": "https://github.com/agent-infra/sandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Container (Docker) isolation",
+        "configurable (proxy) egress control",
+        "env-in secrets",
+        "Self-host",
+        "ephemeral workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 34,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Modal",
+      "url": "https://modal.com",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "gVisor isolation",
+        "full-by-default (cfg) egress control",
+        "env-in secrets",
+        "Managed",
+        "ephemeral workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 35,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Beam",
+      "url": "https://beam.cloud",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "gVisor + runc isolation",
+        "full-by-default (cfg) egress control",
+        "env-in secrets",
+        "Both",
+        "persistent workspace"
+      ],
+      "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 36,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Kubernetes Agent Sandbox",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "gVisor/Kata (pluggable) isolation",
+        "none (delegated) egress control",
+        "env-in secrets",
+        "Self-host (Kubernetes)",
+        "persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 37,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Container (Docker) isolation",
+        "none egress control",
+        "env-in secrets",
+        "Both"
+      ],
+      "license": "https://opensource.org/licenses/MIT"
+    }
+  }
+]
