@@ -79,7 +79,7 @@
     "item": {
       "@type": "SoftwareApplication",
       "name": "Mitos",
-      "url": "https://mitos.run",
+      "url": "https://github.com/mitos-run/mitos",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Linux",
       "featureList": [

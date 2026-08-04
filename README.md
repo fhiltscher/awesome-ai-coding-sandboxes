@@ -33,7 +33,7 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 | [smolvm (smol-machines)](https://github.com/smol-machines/smolvm)            | libkrun µVM                           | **deny-default**              | brokered   | Self-host               | both         | Apache     |
 | [Leap0](https://leap0.dev)                                                   | Firecracker µVM                       | **deny-default** (allowlist)  | brokered   | Both                    | both         | Prop.      |
 | [InstaVM](https://instavm.io)                                                | Firecracker µVM                       | **deny-default** (allowlist)  | brokered   | Both                    | both         | Prop.      |
-| [Mitos](https://mitos.run)                                                   | Firecracker µVM (Kubernetes)          | **deny-default**              | brokered   | Both                    | pers         | Apache     |
+| [Mitos](https://github.com/mitos-run/mitos)                                  | Firecracker µVM (Kubernetes)          | **deny-default**              | brokered   | Both                    | pers         | Apache     |
 | [Sprites (Fly.io)](https://fly.io/sprites)                                   | Firecracker µVM                       | allowlist                     | env-in     | Managed                 | pers         | Prop.      |
 | [microsandbox](https://github.com/superradcompany/microsandbox)              | libkrun µVM                           | configurable (deny opt.)      | brokered   | Self-host (+cloud beta) | pers         | Apache     |
 | [Superserve](https://superserve.ai)                                          | Firecracker µVM                       | configurable (allowlist)      | brokered   | Both                    | both         | Apache     |
@@ -83,7 +83,7 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 
 ### How these values were verified
 
-Every cell traces back to the project's own documentation or source repository — not to blog posts, not to vendor comparisons, not to an earlier revision of this list. Where a project documents nothing, the cell says `?` rather than a guess: an honest gap is more useful than a confident error. Contributors quote the supporting phrase in the pull request so a reviewer can check the claim without repeating the research, and the matrix is the single source for [`_data/sandboxes.json`](_data/sandboxes.json), which CI regenerates and diffs on every change — the structured data this page publishes cannot silently drift from the table above.
+Every cell traces back to the project's own documentation or source repository — not to blog posts, not to vendor comparisons, not to an earlier revision of this list. Where a project documents nothing, the cell says `?` rather than a guess: an honest gap is more useful than a confident error. Contributors quote the supporting phrase in the pull request so a reviewer can check the claim without repeating the research, and the matrix is the single source for [`_data/sandboxes.json`](https://github.com/fhiltscher/awesome-ai-coding-sandboxes/blob/main/_data/sandboxes.json), which CI regenerates and diffs on every change — the structured data this page publishes cannot silently drift from the table above.
 
 ### What this ranking does not measure
 
@@ -184,4 +184,4 @@ PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing y
 Released under [CC0-1.0](LICENSE) — public domain.
 
 [^resume]: E2B is ephemeral but supports pause/resume.
-[^agentenv]: AgentENV sources: [architecture](https://kvcache-ai.github.io/AgentENV/internals/architecture.html), [networking and persistence](https://kvcache-ai.github.io/AgentENV/concepts/sandboxes.html), [environment injection](https://kvcache-ai.github.io/AgentENV/concepts/templates.html), and [license](https://github.com/kvcache-ai/AgentENV/blob/main/LICENSE).
+[^agentenv]: AgentENV sources: [architecture](https://kvcache-ai.github.io/AgentENV/latest/internals/architecture.html), [networking and persistence](https://kvcache-ai.github.io/AgentENV/latest/concepts/sandboxes.html), [environment injection](https://kvcache-ai.github.io/AgentENV/latest/concepts/templates.html), and [license](https://github.com/kvcache-ai/AgentENV/blob/main/LICENSE).
