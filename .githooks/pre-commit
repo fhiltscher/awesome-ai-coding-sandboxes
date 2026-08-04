@@ -1,0 +1,18 @@
+#!/bin/sh
+# Keeps _data/sandboxes.json in step with the README matrix.
+#
+# Git hooks are not cloned, so this only runs for whoever enabled it:
+#
+#     git config core.hooksPath .githooks
+#
+# Contributors without it are still covered by the data-sync CI check — this
+# just turns that red check into something you never see in the first place.
+
+changed=$(git diff --cached --name-only)
+case "$changed" in
+	*README.md*|*script/sandboxes-data.py*) ;;
+	*) exit 0 ;;
+esac
+
+python3 script/sandboxes-data.py || exit 1
+git add _data/sandboxes.json
