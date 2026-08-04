@@ -4,7 +4,7 @@
 # jekyll-seo-tag drops the redundant "| repo-name" suffix from <title>.
 title: Awesome AI Coding Sandboxes
 tagline: 37 ranked by security posture
-description: Security-posture-first list of sandboxes for running AI coding agents' code, ranked by isolation, egress control and secrets handling
+description: Security-posture-first list of 37 sandboxes for running AI coding agents' code, ranked by isolation tier, network egress control and secrets brokering.
 
 theme: jekyll-theme-primer
 
@@ -23,3 +23,14 @@ defaults:
       image:
         path: /assets/og.png
         alt: "Awesome AI Coding Sandboxes — 37 sandboxes compared by isolation, egress control and secrets handling"
+
+  # Single source for the content date: feeds <lastmod> in sitemap.xml
+  # (jekyll-sitemap) and dateModified/datePublished in the JSON-LD graph
+  # (_includes/head-custom.html). Keep in sync with the "Last updated" line in
+  # README.md — that one is literal text because GitHub renders no Liquid.
+  # Unquoted so YAML yields a Date; date_to_xmlschema needs one.
+  - scope:
+      path: "README.md"
+    values:
+      last_modified_at: 2026-08-03
+      date_published: 2026-07-18
