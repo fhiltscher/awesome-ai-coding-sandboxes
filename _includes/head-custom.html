@@ -20,7 +20,7 @@
       "@type": "Dataset",
       "@id": "{{ '/' | absolute_url }}#dataset",
       "name": "AI Coding Agent Sandboxes — Security Posture Comparison",
-      "description": "Comparison of 37 sandbox platforms for running AI coding agent code, scored on isolation tier (microVM, gVisor, container, process), egress control (deny-default, allowlist, configurable, full-by-default), secrets handling (brokered vs env-in), hosting model, workspace state and license.",
+      "description": "Comparison of {{ site.data.sandboxes | size }} sandbox platforms for running AI coding agent code, scored on isolation tier (microVM, gVisor, container, process), egress control (deny-default, allowlist, configurable, full-by-default), secrets handling (brokered vs env-in), hosting model, workspace state and license.",
       "url": "{{ '/' | absolute_url }}#comparison-matrix",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "keywords": ["AI coding agents","sandbox","microVM","Firecracker","gVisor","egress control","secrets brokering","isolation"],
@@ -43,7 +43,17 @@
         {"@type": "PropertyValue", "name": "Workspace state"},
         {"@type": "PropertyValue", "name": "License"}
       ],
-      "creator": {"@id": "https://github.com/fhiltscher#person"}
+      "creator": {"@id": "https://github.com/fhiltscher#person"},
+      "mainEntity": {"@id": "{{ '/' | absolute_url }}#itemlist"}
+    },
+    {
+      "@type": "ItemList",
+      "@id": "{{ '/' | absolute_url }}#itemlist",
+      "name": "AI coding agent sandboxes ranked by security posture",
+      "description": "Sandbox platforms ordered by isolation tier, then egress control strength — strongest posture first.",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "numberOfItems": {{ site.data.sandboxes | size }},
+      "itemListElement": {{ site.data.sandboxes | jsonify }}
     },
     {
       "@type": "TechArticle",
@@ -56,6 +66,8 @@
       "inLanguage": "en-US",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "author": {"@id": "https://github.com/fhiltscher#person"},
+      "publisher": {"@id": "https://github.com/fhiltscher#person"},
+      "about": {"@id": "{{ '/' | absolute_url }}#itemlist"},
       "mainEntity": {"@id": "{{ '/' | absolute_url }}#dataset"},
       "mainEntityOfPage": "{{ '/' | absolute_url }}"
     },
@@ -63,6 +75,7 @@
       "@type": "Person",
       "@id": "https://github.com/fhiltscher#person",
       "name": "Franz Hiltscher",
+      "description": "Maintainer of the awesome-ai-coding-sandboxes security posture comparison.",
       "url": "https://github.com/fhiltscher",
       "sameAs": [
         "https://github.com/fhiltscher",
