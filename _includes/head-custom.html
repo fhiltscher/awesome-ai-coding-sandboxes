@@ -1,0 +1,50 @@
+<!-- jekyll-seo-tag emits og:image but not its dimensions; some scrapers need
+     them to render a large card on first fetch. Kept in sync with script/og-image.py. -->
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dataset",
+      "@id": "{{ '/' | absolute_url }}#dataset",
+      "name": "AI Coding Agent Sandboxes — Security Posture Comparison",
+      "description": "Comparison of 37 sandbox platforms for running AI coding agent code, scored on isolation tier (microVM, gVisor, container, process), egress control (deny-default, allowlist, configurable, full-by-default), secrets handling (brokered vs env-in), hosting model, workspace state and license.",
+      "url": "{{ '/' | absolute_url }}#comparison-matrix",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "keywords": ["AI coding agents","sandbox","microVM","Firecracker","gVisor","egress control","secrets brokering","isolation"],
+      "dateModified": "{{ site.time | date: '%Y-%m-%d' }}",
+      "isAccessibleForFree": true,
+      "variableMeasured": [
+        {"@type": "PropertyValue", "name": "Isolation tier"},
+        {"@type": "PropertyValue", "name": "Egress control"},
+        {"@type": "PropertyValue", "name": "Secrets handling"},
+        {"@type": "PropertyValue", "name": "Self-host / Managed"},
+        {"@type": "PropertyValue", "name": "Workspace state"},
+        {"@type": "PropertyValue", "name": "License"}
+      ],
+      "creator": {"@id": "https://github.com/fhiltscher#person"}
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "{{ '/' | absolute_url }}#article",
+      "headline": "Awesome AI Coding Sandboxes",
+      "dateModified": "{{ site.time | date: '%Y-%m-%d' }}",
+      "inLanguage": "en-US",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author": {"@id": "https://github.com/fhiltscher#person"},
+      "mainEntity": {"@id": "{{ '/' | absolute_url }}#dataset"},
+      "mainEntityOfPage": "{{ '/' | absolute_url }}"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://github.com/fhiltscher#person",
+      "name": "Franz Hiltscher",
+      "url": "https://github.com/fhiltscher"
+    }
+  ]
+}
+</script>

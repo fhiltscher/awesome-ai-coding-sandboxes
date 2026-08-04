@@ -1,0 +1,25 @@
+# title must match the page title derived from the README's first H1 by
+# jekyll-titles-from-headings. When they match, the Primer layout suppresses its
+# own site-title <h1> (_layouts/default.html: `if site.title != page.title`) and
+# jekyll-seo-tag drops the redundant "| repo-name" suffix from <title>.
+title: Awesome AI Coding Sandboxes
+tagline: 37 ranked by security posture
+description: Security-posture-first list of sandboxes for running AI coding agents' code, ranked by isolation, egress control and secrets handling
+
+theme: jekyll-theme-primer
+
+# Same value GitHub Pages injects in production; set explicitly so local /
+# containerised builds of the github-pages gem resolve site.github metadata.
+repository: fhiltscher/awesome-ai-coding-sandboxes
+
+plugins:
+  - jekyll-sitemap
+
+# url/baseurl are injected by GitHub Pages for project sites — do not set them here.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/og.png
+        alt: "Awesome AI Coding Sandboxes — 37 sandboxes compared by isolation, egress control and secrets handling"
