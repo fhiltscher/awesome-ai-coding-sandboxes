@@ -1,4 +1,4 @@
-# Awesome AI Coding Sandboxes [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome AI Coding Sandboxes <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" width="110" height="20"></a>
 
 > A curated list of sandboxing and isolation solutions for running the code of autonomous **AI coding agents** (Claude Code, Codex, OpenHands, and friends) — organized **by security posture first**: how strong the isolation boundary is, and what the agent can still reach beyond it.
 
@@ -163,7 +163,7 @@ Related but not untrusted-code sandboxes for coding agents:
 
 ## Contributing
 
-PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing your PR). See [`CONTRIBUTING.md`](CONTRIBUTING.md) and the [Code of Conduct](code-of-conduct.md). Maintained by [@fhiltscher](https://github.com/fhiltscher).
+PRs welcome — **and actually reviewed** (as time allows; no bot auto-closing your PR). See [`CONTRIBUTING.md`](CONTRIBUTING.md) and the [Code of Conduct](code-of-conduct.md). Maintained by [@fhiltscher](https://github.com/fhiltscher) ([LinkedIn](https://www.linkedin.com/in/franz-hiltscher/)).
 
 - One project per PR. Every matrix cell needs a **source link** (official docs/repo). Don't know a value? Use `?` — never guess.
 - Entries must run agent-generated code with a real isolation boundary; no dead projects, no marketing-only pages. License is not a criterion.
