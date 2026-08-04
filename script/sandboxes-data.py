@@ -20,7 +20,7 @@ README = ROOT / "README.md"
 OUT = ROOT / "_data" / "sandboxes.json"
 
 # The matrix, not the "Isolation building blocks" table further down.
-SECTION = ("## Comparison matrix", "### What the data shows")
+SECTION = ("## Comparison matrix", "## What the data shows")
 
 LINK = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 FOOTNOTE = re.compile(r"\[\^[^\]]+\]")

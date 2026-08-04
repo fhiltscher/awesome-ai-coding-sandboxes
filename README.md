@@ -11,6 +11,7 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 ## Contents
 
 - [Comparison matrix](#comparison-matrix)
+- [What the data shows](#what-the-data-shows)
 - [Why security-posture-first](#why-security-posture-first)
 - [VMs & microVMs](#vms--microvms)
 - [Containers & gVisor](#containers--gvisor)
@@ -66,7 +67,7 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 | [Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) | gVisor/Kata (pluggable)               | none (delegated)              | env-in     | Self-host (Kubernetes)  | pers         | Apache     |
 | [OpenHands](https://github.com/OpenHands/OpenHands)                          | Container (Docker)                    | none                          | env-in     | Both                    | ?            | MIT        |
 
-### What the data shows
+## What the data shows
 
 **Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
@@ -79,6 +80,16 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 **Control-plane reachable from inside** (the "front desk" risk): Sprites documents an in-sandbox management API (reachable); Modal documents it is _not_. Others undocumented.
 
 **Control-plane authentication:** AgentENV currently has no built-in API authorization. Its maintainers explicitly require deployment on a trusted network or behind an authorization proxy.
+
+### How these values were verified
+
+Every cell traces back to the project's own documentation or source repository — not to blog posts, not to vendor comparisons, not to an earlier revision of this list. Where a project documents nothing, the cell says `?` rather than a guess: an honest gap is more useful than a confident error. Contributors quote the supporting phrase in the pull request so a reviewer can check the claim without repeating the research, and the matrix is the single source for [`_data/sandboxes.json`](_data/sandboxes.json), which CI regenerates and diffs on every change — the structured data this page publishes cannot silently drift from the table above.
+
+### What this ranking does not measure
+
+It reads documentation, not implementations. A **deny-default** cell means the project _documents_ deny-by-default egress; it is not the result of a penetration test, and no escape research was done for this list. Cold-start latency, throughput, pricing, SDK ergonomics and language coverage are deliberately absent — they are covered well elsewhere, and they are not what fails when an agent gets prompt-injected.
+
+A strong row also does not equal a safe deployment. Brokered secrets still require the broker to be configured; an allowlist is only as tight as its entries; a µVM with a mounted host directory has traded its boundary away. Read the matrix as a shortlist filter, then read the docs of the two or three candidates that survive it.
 
 ## Why security-posture-first
 
