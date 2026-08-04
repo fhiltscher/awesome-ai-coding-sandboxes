@@ -1,2 +1,5 @@
 node_modules/
 .DS_Store
+_site/
+.jekyll-cache/
+.jekyll-metadata
