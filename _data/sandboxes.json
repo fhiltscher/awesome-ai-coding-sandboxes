@@ -288,7 +288,7 @@
       "featureList": [
         "Firecracker µVM isolation",
         "configurable egress control",
-        "unverified secrets",
+        "env-in secrets",
         "Self-host",
         "ephemeral workspace"
       ]
@@ -509,7 +509,7 @@
       "featureList": [
         "Firecracker µVM isolation",
         "full-by-default egress control",
-        "unverified secrets",
+        "env-in secrets",
         "Managed",
         "ephemeral and persistent workspace"
       ]
@@ -677,7 +677,8 @@
         "Container (Docker) isolation",
         "none egress control",
         "env-in secrets",
-        "Both"
+        "Both",
+        "ephemeral and persistent workspace"
       ],
       "license": "https://opensource.org/licenses/MIT"
     }

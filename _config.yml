@@ -41,5 +41,5 @@ defaults:
   - scope:
       path: "README.md"
     values:
-      last_modified_at: 2026-08-03
+      last_modified_at: 2026-08-09
       date_published: 2026-07-18

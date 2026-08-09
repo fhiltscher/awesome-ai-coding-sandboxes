@@ -1,4 +1,4 @@
-# Awesome AI Coding Sandboxes <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" width="110" height="20"></a>
+# Awesome AI Coding Sandboxes [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of sandboxing and isolation solutions for running the code of autonomous **AI coding agents** (Claude Code, Codex, OpenHands, and friends) — organized **by security posture first**: how strong the isolation boundary is, and what the agent can still reach beyond it.
 
@@ -6,7 +6,7 @@ AI coding agents run arbitrary, model-generated commands. The hard part isn't sp
 
 <!-- Keep this date in sync with last_modified_at in _config.yml — it drives
      <lastmod> in sitemap.xml and dateModified in the JSON-LD graph. -->
-_Last updated: 2026-08-03 · Actively maintained — PRs welcome._
+_Last updated: 2026-08-09 · Actively maintained — PRs welcome._
 
 ## Contents
 
@@ -44,7 +44,7 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 | [BoxLite](https://github.com/boxlite-ai/boxlite)                             | KVM/HVF µVM                           | configurable (allowlist)      | brokered   | Self-host               | pers         | Apache     |
 | [OpenComputer](https://opencomputer.dev)                                     | KVM full VM                           | configurable (allowlist, L7)  | brokered   | Both                    | pers         | Apache     |
 | [Blaxel](https://blaxel.ai)                                                  | µVM                                   | configurable (preview)        | brokered   | Managed                 | pers         | Prop.      |
-| [Qbox](https://qbox.sh)                                                      | Firecracker µVM                       | configurable                  | unverified | Self-host               | eph          | unverified |
+| [Qbox](https://qbox.sh)                                                      | Firecracker µVM                       | configurable                  | env-in     | Self-host               | eph          | unverified |
 | [Katakate (k7)](https://github.com/Katakate/k7)                              | Kata+FC µVM (K3s)                     | configurable (allowlist)      | env-in     | Self-host               | eph          | Apache     |
 | [AgentENV](https://github.com/kvcache-ai/AgentENV)[^agentenv]                | Firecracker µVM                       | full-by-default (cfg)         | env-in     | Self-host               | both         | MIT        |
 | [Freestyle](https://freestyle.sh)                                            | Full VM/KVM                           | configurable (on/off)         | unverified | Managed                 | both         | Prop.      |
@@ -56,7 +56,7 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 | [Morph](https://morph.so)                                                    | µVM (VMM n/s)                         | full-by-default               | env-in     | Both                    | both         | Prop.      |
 | [Tensorlake](https://tensorlake.ai)                                          | Firecracker+CH µVM                    | full-by-default (allow/deny)  | env-in     | Both (BYOC)             | both         | Prop.      |
 | [Box (ascii.dev)](https://box.ascii.dev)                                     | Linux VM                              | full-by-default               | env-in     | Managed                 | pers         | Prop.      |
-| [Novita](https://novita.ai/sandbox)                                          | Firecracker µVM                       | full-by-default               | unverified | Managed                 | both         | Prop.      |
+| [Novita](https://novita.ai/sandbox)                                          | Firecracker µVM                       | full-by-default               | env-in     | Managed                 | both         | Prop.      |
 | [Baponi](https://baponi.ai)                                                  | Container (seccomp+cgroups, zero-cap) | **deny-default**              | brokered   | Both                    | both         | Prop.      |
 | [OpenSandbox](https://github.com/alibaba/OpenSandbox)                        | Container (opt. gVisor/Kata/FC)       | configurable (deny avail.)    | brokered   | Self-host               | eph          | Apache     |
 | [Cloudflare Sandboxes](https://developers.cloudflare.com/sandbox/)           | VM-backed container                   | configurable (deny avail.)    | brokered   | Managed                 | both         | Prop.      |
@@ -65,13 +65,13 @@ _Last updated: 2026-08-03 · Actively maintained — PRs welcome._
 | [Modal](https://modal.com)                                                   | gVisor                                | full-by-default (cfg)         | env-in     | Managed                 | eph          | Prop.      |
 | [Beam](https://beam.cloud)                                                   | gVisor + runc                         | full-by-default (cfg)         | env-in     | Both                    | pers         | AGPL       |
 | [Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) | gVisor/Kata (pluggable)               | none (delegated)              | env-in     | Self-host (Kubernetes)  | pers         | Apache     |
-| [OpenHands](https://github.com/OpenHands/OpenHands)                          | Container (Docker)                    | none                          | env-in     | Both                    | ?            | MIT        |
+| [OpenHands](https://github.com/OpenHands/OpenHands)                          | Container (Docker)                    | none                          | env-in     | Both                    | both         | MIT        |
 
 ## What the data shows
 
 **Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
-**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Katakate, Sprites, Morph, Tensorlake, Box, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
+**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
 
 **The strong-posture set** (µVM/VM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos** — plus Superserve/Islo/Declaw/OpenComputer on configurable egress. That's the bar to beat.
 
