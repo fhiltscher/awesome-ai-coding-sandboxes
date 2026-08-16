@@ -10,7 +10,9 @@ A project belongs here if it:
 2. **Provides real isolation** (microVM, gVisor/user-space kernel, container, or process/namespace) as a security boundary.
 3. **Is publicly usable and documented** — open source, or a commercial product with real docs.
 
-We do **not** list: dead/unmaintained projects, marketing pages with no substance, or agent frameworks without a sandbox. **License is not a criterion** — permissive and copyleft (incl. AGPL) projects are both welcome.
+We do **not** list: dead projects, marketing pages with no substance, or agent frameworks without a sandbox. **License is not a criterion** — permissive and copyleft (incl. AGPL) projects are both welcome.
+
+"Dead" is checked, not judged: an entry is removed when its repository is **archived** or has had **no commit for 12 months**. Both are visible on the project page, so anyone can verify a removal. Hosted products without a public repo are judged on their docs and changelog instead.
 
 ## The one rule that matters: source every claim
 
@@ -24,8 +26,9 @@ This list lives or dies on accuracy. So:
 
 1. **One project per PR.** Small, verifiable PRs get merged faster.
 2. Add the project to the **matching isolation-layer section** (the bulleted link list) as:
-   `[Name](official-url) — one factual sentence.`
-3. Add a row to the **[Comparison matrix](README.md#comparison-matrix)** using the column values below.
+   `- [Name](official-url) - One factual sentence.`
+   The description is required and states the **mechanism** (what enforces the boundary), not the pitch. Note alpha/beta status if the project does.
+3. A **[Comparison matrix](README.md#comparison-matrix)** row is optional — the sections carry projects that aren't (yet) verified across every column. If you do add a row, every cell needs a source.
 4. Keep it factual and neutral. No superlatives, no marketing copy.
 
 ### Comparison-matrix column values
@@ -58,6 +61,8 @@ git config core.hooksPath .githooks
 ## Reporting stale or wrong data
 
 Found an entry that's out of date or incorrect? **Open an issue or a PR.** Accuracy beats politeness — if a value has changed or was wrong, we want to fix it.
+
+That includes projects that moved: GitHub redirects renamed repos, so a stale link keeps working and quietly hides the rename. Report it and we'll point the link at the current owner.
 
 ## Review & merge
 
