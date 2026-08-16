@@ -101,11 +101,9 @@ Key nuance: almost every sandbox _has_ outbound network — that's the problem, 
 
 Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and Cloud Hypervisor. The verified µVM entries are in the comparison matrix above; the list below adds open-source projects not (yet) in the matrix.
 
-- [ERA](https://github.com/BinSquare/ERA)
 - [Vibe](https://github.com/lynaghk/vibe)
-- [Volant](https://github.com/volantvm/volant)
+- [Volant](https://github.com/0xchasercat/volant)
 - [Netclode](https://github.com/angristan/netclode)
-- [yolo-cage](https://github.com/borenstein/yolo-cage)
 - [Chamber](https://github.com/cirruslabs/chamber)
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
@@ -114,36 +112,39 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 
 Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Containers. Verified entries are in the matrix above; additional projects:
 
-- [SandboxAI](https://github.com/substratusai/sandboxai)
-- [llm-sandbox](https://github.com/vndee/llm-sandbox)
-- [MCP Runner](https://github.com/abir-taheer/mcp-runner)
-- [Sandboxer](https://github.com/ammmir/sandboxer)
-- [Kilntainers](https://github.com/Kiln-AI/Kilntainers)
-- [packnplay](https://github.com/obra/packnplay)
-- [yolobox](https://github.com/finbarr/yolobox)
-- [vibebin](https://github.com/jgbrwn/vibebin)
+- [llm-sandbox](https://github.com/vndee/llm-sandbox) - Python library that runs LLM-generated code on Docker, Podman or Kubernetes backends.
+- [MCP Runner](https://github.com/abir-taheer/mcp-runner) - Runs dockerized MCP servers as ephemeral, multi-tenant deployments on the gVisor runtime.
+- [Kilntainers](https://github.com/Kiln-AI/Kilntainers) - MCP server that gives every agent an ephemeral Linux container for shell commands.
+- [packnplay](https://github.com/obra/packnplay) - Launches Claude Code, Codex or Gemini in per-worktree Docker containers; no introspection or access control.
+- [yolobox](https://github.com/finbarr/yolobox) - Container wrapper that grants the agent full sudo inside while keeping the host home directory out of reach.
+- [vibebin](https://github.com/jgbrwn/vibebin) - Self-hosted Incus/LXC platform for persistent agent sandboxes, with Caddy and direct SSH routing.
+- [Leash](https://github.com/strongdm/leash) - Wraps agents in containers and enforces Cedar policies on their activity; experimental container-free mode on macOS.
+- [clampdown](https://github.com/89luca89/clampdown) - Hardened container sandbox with an egress-filtering sidecar and an auth proxy that keeps API keys out of the agent container.
+- [code-on-incus](https://github.com/mensfeld/code-on-incus) - Gives each agent its own Incus system container with root, systemd and Docker inside.
+- [clawker](https://github.com/schmitthub/clawker) - Self-hosted Docker sandboxes for coding agents, running behind an egress filter.
 
 ## Process & namespace sandboxes
 
 Syscall/filesystem/network restriction for individual processes, built on Bubblewrap, Landlock, and seccomp.
 
-- [Anthropic Sandbox Runtime](https://github.com/anthropic-experimental/sandbox-runtime)
-- [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell)
-- [Leash](https://github.com/strongdm/leash)
-- [Fence (Tusk)](https://github.com/use-tusk/fence)
-- [Landrun](https://github.com/Zouuup/landrun)
-- [sandlock](https://github.com/multikernel/sandlock)
-- [PythonSafeEval](https://github.com/s3131212/PythonSafeEval)
+- [Anthropic Sandbox Runtime](https://github.com/anthropic-experimental/sandbox-runtime) - Filesystem and network restrictions for arbitrary processes via Seatbelt on macOS and bubblewrap on Linux, plus proxy-based domain allowlisting.
+- [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) - Agent runtime that enforces declarative YAML policies on file access, exfiltration and network activity (alpha).
+- [Greywall](https://github.com/GreyhavenHQ/greywall) - Container-free, deny-by-default sandbox for filesystem, network and syscalls on Linux and macOS, with an allow-by-default watch mode.
+- [Fence](https://github.com/fencesandbox/fence) - Lightweight, container-free sandbox that runs commands under network and filesystem restrictions.
+- [Landrun](https://github.com/Zouuup/landrun) - Runs any Linux process in an unprivileged Landlock sandbox, firejail-style but kernel-native.
+- [sandlock](https://github.com/multikernel/sandlock) - Confines untrusted code with Landlock, seccomp-bpf and seccomp user notification; no root, no cgroups, copy-on-write working directory.
+- [HiveBox](https://github.com/TetiAI/hivebox) - Namespaces, cgroups, seccomp and Landlock behind a CLI and REST API, one OpenCode agent per sandbox.
+- [ClaudeCage](https://github.com/PACHAKUTlQ/ClaudeCage) - Packs Claude Code into a single portable bubblewrap sandbox scoped to one project directory.
 
 ## Filesystem & WebAssembly sandboxes
 
-- [AgentFS](https://docs.turso.tech/agentfs)
-- [LocalSandbox](https://github.com/coplane/localsandbox)
-- [Wassette](https://github.com/microsoft/wassette)
-- [Eryx](https://github.com/eryx-org/eryx)
-- [Capsule](https://github.com/mavdol/capsule)
-- [AgentVM](https://github.com/deepclause/agentvm)
-- [amla-sandbox](https://github.com/amlalabs/amla-sandbox)
+- [AgentFS](https://docs.turso.tech/agentfs) - Copy-on-write filesystem for agents stored in a single SQLite database; the CLI wraps an existing program in a sandboxed session.
+- [LocalSandbox](https://github.com/coplane/localsandbox) - Python SDK combining just-bash, AgentFS and Pyodide into a persistent WebAssembly-backed bash/python environment (beta, unaudited).
+- [Wassette](https://github.com/microsoft/wassette) - Security-oriented runtime that serves WebAssembly Components as MCP tools.
+- [Eryx](https://github.com/eryx-org/eryx) - Runs untrusted CPython on Wasmtime with memory and CPU limits and no filesystem or network access by default.
+- [Capsule](https://github.com/capsulerun/capsule) - Runtime that executes agent tasks as untrusted code in isolated WebAssembly environments.
+- [AgentVM](https://github.com/deepclause/agentvm) - Node.js library running an Alpine Linux VM compiled to WebAssembly (container2wasm) in a worker thread.
+- [amla-sandbox](https://github.com/amlalabs/amla-sandbox) - WebAssembly sandbox for agent code with capability enforcement, a virtual filesystem and no network.
 
 ## Isolation building blocks
 
