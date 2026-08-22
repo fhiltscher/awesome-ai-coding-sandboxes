@@ -1,0 +1,25 @@
+name: Report wrong or stale data
+description: A matrix cell, description or link that is out of date or incorrect
+labels: [data]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: Which project, and which column or line
+      placeholder: E2B — Egress control
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it says vs. what it should say
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Official docs or repo page showing the correct value. Use `?` in the correction if the docs do not state it.
+    validations:
+      required: true
