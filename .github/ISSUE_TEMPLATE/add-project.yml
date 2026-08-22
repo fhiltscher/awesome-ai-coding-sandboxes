@@ -1,0 +1,50 @@
+name: Suggest a project
+description: Propose a sandbox or isolation solution for the list
+labels: [new entry]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: Name and official URL (repo or product page)
+      placeholder: Firecracker — https://github.com/firecracker-microvm/firecracker
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: What enforces the isolation boundary?
+      description: One factual sentence. microVM, gVisor/user-space kernel, container, or process/namespace — and what it runs.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Link to the official docs or repo page that backs the sentence above. Not a blog post, not a vendor comparison.
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Where does it belong?
+      options:
+        - VMs & microVMs
+        - Containers & gVisor
+        - Process & namespace sandboxes
+        - Filesystem & WebAssembly sandboxes
+        - Isolation building blocks
+        - Adjacent
+        - Not sure — happy to discuss
+    validations:
+      required: true
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Inclusion criteria
+      description: See [CONTRIBUTING.md](https://github.com/fhiltscher/awesome-ai-coding-sandboxes/blob/main/CONTRIBUTING.md). License is not a criterion.
+      options:
+        - label: It executes agent-generated or agent-driven code — not just an agent framework
+          required: true
+        - label: It is publicly usable and documented, and not archived or dormant for 12 months
+          required: true
