@@ -107,7 +107,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Chamber](https://github.com/cirruslabs/chamber)
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
-- [distro-rig-vps](https://github.com/shafir-info/distro-rig-vps)
+- [distro-rig-vps](https://github.com/shafir-info/distro-rig-vps) - Self-hosted KVM/libvirt sandbox giving coding agents guest root in disposable real-boot Linux VMs behind a constrained unprivileged host control API.
 
 ## Containers & gVisor
 
