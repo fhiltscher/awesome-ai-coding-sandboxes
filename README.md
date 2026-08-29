@@ -107,6 +107,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Chamber](https://github.com/cirruslabs/chamber)
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
+- [distro-rig-vps](https://github.com/shafir-info/distro-rig-vps)
 
 ## Containers & gVisor
 
