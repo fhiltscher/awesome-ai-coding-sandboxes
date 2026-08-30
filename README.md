@@ -122,6 +122,7 @@ Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Co
 - [clampdown](https://github.com/89luca89/clampdown) - Hardened container sandbox with an egress-filtering sidecar and an auth proxy that keeps API keys out of the agent container.
 - [code-on-incus](https://github.com/mensfeld/code-on-incus) - Gives each agent its own Incus system container with root, systemd and Docker inside.
 - [clawker](https://github.com/schmitthub/clawker) - Self-hosted Docker sandboxes for coding agents, running behind an egress filter.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) - Orchestrates persistent agent sessions through selectable local, Docker, Kubernetes and worker execution sandboxes; isolation depends on the backend.
 
 ## Process & namespace sandboxes
 
