@@ -171,6 +171,7 @@ Related but not untrusted-code sandboxes for coding agents:
 - [Clusy](https://www.clusy.io) - Agent-native notebook for ML/data science; managed-only, runs agent-written cells on cloud CPU/GPU "managed cloud sandboxes". Isolation mechanism, tenant boundary and egress controls undocumented; workspace separation stated as logical only.
 - [ComputeSDK](https://computesdk.com) - Provider-agnostic router/SDK across sandbox backends (no own isolation); see also [VibeKit](https://docs.vibekit.sh).
 - [agentbox (madarco)](https://github.com/madarco/agentbox) - Self-hosted CLI running coding agents in parallel (Docker+FUSE / cloud VM); dev-workflow tooling on off-the-shelf isolation. MIT.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) - Self-hosted agent runtime with session-scoped execution, MCP/tool governance, approvals, audit/replay, and local/Docker/Kubernetes/worker backends; isolation depends on the provider.
 - [Giant Swarm Agent Platform](https://www.giantswarm.io/agent-platform) - Kubernetes-based agent governance/orchestration control plane (MCP); ships no dedicated untrusted-code sandbox.
 - [Fireactions](https://github.com/hostinger/fireactions) - GitHub-Actions runner orchestrator on Firecracker µVMs; no agent/sandbox API. Apache-2.0.
 
