@@ -392,6 +392,24 @@
     "position": 22,
     "item": {
       "@type": "SoftwareApplication",
+      "name": "CreateOS Sandbox",
+      "url": "https://createos.sh/products/sandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "full-by-default (cfg) egress control",
+        "env-in secrets",
+        "Both",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 23,
+    "item": {
+      "@type": "SoftwareApplication",
       "name": "Northflank",
       "url": "https://northflank.com",
       "applicationCategory": "DeveloperApplication",
@@ -407,7 +425,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 23,
+    "position": 24,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Arrakis",
@@ -426,7 +444,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 24,
+    "position": 25,
     "item": {
       "@type": "SoftwareApplication",
       "name": "SmolVM (Celesto AI)",
@@ -445,7 +463,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 25,
+    "position": 26,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Morph",
@@ -463,7 +481,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 26,
+    "position": 27,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Tensorlake",
@@ -481,7 +499,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 27,
+    "position": 28,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Box (ascii.dev)",
@@ -499,7 +517,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 28,
+    "position": 29,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Novita",
@@ -517,7 +535,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 29,
+    "position": 30,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Baponi",
@@ -535,7 +553,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 30,
+    "position": 31,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenSandbox",
@@ -554,7 +572,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 31,
+    "position": 32,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Cloudflare Sandboxes",
@@ -572,7 +590,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 32,
+    "position": 33,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Daytona",
@@ -591,7 +609,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 33,
+    "position": 34,
     "item": {
       "@type": "SoftwareApplication",
       "name": "AIO Sandbox",
@@ -610,7 +628,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 34,
+    "position": 35,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Modal",
@@ -628,7 +646,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 35,
+    "position": 36,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Beam",
@@ -647,7 +665,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 36,
+    "position": 37,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Kubernetes Agent Sandbox",
@@ -666,7 +684,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 37,
+    "position": 38,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenHands",
