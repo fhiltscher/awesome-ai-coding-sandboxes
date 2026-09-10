@@ -97,6 +97,23 @@
     "position": 6,
     "item": {
       "@type": "SoftwareApplication",
+      "name": "ainclave",
+      "url": "https://ainclave.com",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "deny-default egress control",
+        "brokered secrets",
+        "Managed"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 7,
+    "item": {
+      "@type": "SoftwareApplication",
       "name": "Sprites (Fly.io)",
       "url": "https://fly.io/sprites",
       "applicationCategory": "DeveloperApplication",
@@ -112,7 +129,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 7,
+    "position": 8,
     "item": {
       "@type": "SoftwareApplication",
       "name": "microsandbox",
@@ -131,7 +148,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 8,
+    "position": 9,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Superserve",
@@ -150,7 +167,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 9,
+    "position": 10,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Islo",
@@ -168,7 +185,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 10,
+    "position": 11,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Declaw",
@@ -186,7 +203,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 11,
+    "position": 12,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OmniRun",
@@ -204,7 +221,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 12,
+    "position": 13,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Vercel Sandbox",
@@ -222,7 +239,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 13,
+    "position": 14,
     "item": {
       "@type": "SoftwareApplication",
       "name": "BoxLite",
@@ -241,7 +258,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 14,
+    "position": 15,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenComputer",
@@ -260,7 +277,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 15,
+    "position": 16,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Blaxel",
@@ -278,7 +295,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 16,
+    "position": 17,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Qbox",
@@ -296,7 +313,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 17,
+    "position": 18,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Katakate (k7)",
@@ -315,7 +332,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 18,
+    "position": 19,
     "item": {
       "@type": "SoftwareApplication",
       "name": "AgentENV",
@@ -334,7 +351,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 19,
+    "position": 20,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Freestyle",
@@ -352,7 +369,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 20,
+    "position": 21,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Runloop",
@@ -370,7 +387,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 21,
+    "position": 22,
     "item": {
       "@type": "SoftwareApplication",
       "name": "E2B",
@@ -385,24 +402,6 @@
         "ephemeral workspace"
       ],
       "license": "https://www.apache.org/licenses/LICENSE-2.0"
-    }
-  },
-  {
-    "@type": "ListItem",
-    "position": 22,
-    "item": {
-      "@type": "SoftwareApplication",
-      "name": "CreateOS Sandbox",
-      "url": "https://createos.sh/products/sandbox",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Linux",
-      "featureList": [
-        "Firecracker µVM isolation",
-        "full-by-default (cfg) egress control",
-        "env-in secrets",
-        "Both",
-        "persistent workspace"
-      ]
     }
   },
   {

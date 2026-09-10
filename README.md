@@ -27,56 +27,56 @@ _Last updated: 2026-08-09 · Actively maintained — PRs welcome._
 **Secrets** = `brokered` (creds kept OUT via proxy) vs `env-in` (injected). Sorted by isolation tier, then egress strength.
 **Abbrev.:** eph = ephemeral · pers = persistent · Prop. = proprietary.
 
-| Project                                                                      | Isolation                             | Egress control                | Secrets    | Self-host / Managed     | State        | License    |
-| ---------------------------------------------------------------------------- | ------------------------------------- | ----------------------------- | ---------- | ----------------------- | ------------ | ---------- |
-| [Cleanroom](https://github.com/buildkite/cleanroom)                          | Firecracker µVM                       | **deny-default**              | brokered   | Self-host               | eph          | MIT        |
-| [smolvm (smol-machines)](https://github.com/smol-machines/smolvm)            | libkrun µVM                           | **deny-default**              | brokered   | Self-host               | both         | Apache     |
-| [Leap0](https://leap0.dev)                                                   | Firecracker µVM                       | **deny-default** (allowlist)  | brokered   | Both                    | both         | Prop.      |
-| [InstaVM](https://instavm.io)                                                | Firecracker µVM                       | **deny-default** (allowlist)  | brokered   | Both                    | both         | Prop.      |
-| [Mitos](https://github.com/mitos-run/mitos)                                  | Firecracker µVM (Kubernetes)          | **deny-default**              | brokered   | Both                    | pers         | Apache     |
-| [Sprites (Fly.io)](https://fly.io/sprites)                                   | Firecracker µVM                       | allowlist                     | env-in     | Managed                 | pers         | Prop.      |
-| [microsandbox](https://github.com/superradcompany/microsandbox)              | libkrun µVM                           | configurable (deny opt.)      | brokered   | Self-host (+cloud beta) | pers         | Apache     |
-| [Superserve](https://superserve.ai)                                          | Firecracker µVM                       | configurable (allowlist)      | brokered   | Both                    | both         | Apache     |
-| [Islo](https://islo.dev)                                                     | Cloud Hypervisor µVM                  | configurable (allow/deny)     | brokered   | Both (BYOC)             | both         | Prop.      |
-| [Declaw](https://declaw.ai)                                                  | Firecracker µVM                       | configurable (allow/deny, L7) | brokered   | Both (BYOC)             | both         | Prop.      |
-| [OmniRun](https://omnirun.io)                                                | Firecracker µVM                       | configurable (allow/deny)     | env-in     | Both                    | eph          | Prop.      |
-| [Vercel Sandbox](https://github.com/vercel/sandbox)                          | Firecracker µVM                       | configurable (deny-all)       | brokered   | Managed                 | eph          | Prop.      |
-| [BoxLite](https://github.com/boxlite-ai/boxlite)                             | KVM/HVF µVM                           | configurable (allowlist)      | brokered   | Self-host               | pers         | Apache     |
-| [OpenComputer](https://opencomputer.dev)                                     | KVM full VM                           | configurable (allowlist, L7)  | brokered   | Both                    | pers         | Apache     |
-| [Blaxel](https://blaxel.ai)                                                  | µVM                                   | configurable (preview)        | brokered   | Managed                 | pers         | Prop.      |
-| [Qbox](https://qbox.sh)                                                      | Firecracker µVM                       | configurable                  | env-in     | Self-host               | eph          | unverified |
-| [Katakate (k7)](https://github.com/Katakate/k7)                              | Kata+FC µVM (K3s)                     | configurable (allowlist)      | env-in     | Self-host               | eph          | Apache     |
-| [AgentENV](https://github.com/kvcache-ai/AgentENV)[^agentenv]                | Firecracker µVM                       | full-by-default (cfg)         | env-in     | Self-host               | both         | MIT        |
-| [Freestyle](https://freestyle.sh)                                            | Full VM/KVM                           | configurable (on/off)         | unverified | Managed                 | both         | Prop.      |
-| [Runloop](https://runloop.ai)                                                | VM + container                        | full-by-default (cfg)         | brokered   | Managed                 | pers         | Prop.      |
-| [E2B](https://e2b.dev)                                                       | Firecracker µVM                       | full-by-default (cfg)         | env-in     | Both                    | eph[^resume] | Apache     |
-| [CreateOS Sandbox](https://createos.sh/products/sandbox)                     | Firecracker µVM                       | full-by-default (cfg)         | env-in     | Both                    | pers         | Prop.      |
-| [Northflank](https://northflank.com)                                         | Kata+FC µVM                           | full-by-default               | env-in     | Both (BYOC)             | pers         | Prop.      |
-| [Arrakis](https://github.com/abshkbh/arrakis)                                | Cloud Hypervisor µVM                  | full-by-default               | env-in     | Self-host               | pers         | AGPL       |
-| [SmolVM (Celesto AI)](https://github.com/CelestoAI/SmolVM)                   | Firecracker+QEMU µVM                  | full-by-default (allowlist)   | env-in     | Self-host               | both         | Apache     |
-| [Morph](https://morph.so)                                                    | µVM (VMM n/s)                         | full-by-default               | env-in     | Both                    | both         | Prop.      |
-| [Tensorlake](https://tensorlake.ai)                                          | Firecracker+CH µVM                    | full-by-default (allow/deny)  | env-in     | Both (BYOC)             | both         | Prop.      |
-| [Box (ascii.dev)](https://box.ascii.dev)                                     | Linux VM                              | full-by-default               | env-in     | Managed                 | pers         | Prop.      |
-| [Novita](https://novita.ai/sandbox)                                          | Firecracker µVM                       | full-by-default               | env-in     | Managed                 | both         | Prop.      |
-| [Baponi](https://baponi.ai)                                                  | Container (seccomp+cgroups, zero-cap) | **deny-default**              | brokered   | Both                    | both         | Prop.      |
-| [OpenSandbox](https://github.com/alibaba/OpenSandbox)                        | Container (opt. gVisor/Kata/FC)       | configurable (deny avail.)    | brokered   | Self-host               | eph          | Apache     |
-| [Cloudflare Sandboxes](https://developers.cloudflare.com/sandbox/)           | VM-backed container                   | configurable (deny avail.)    | brokered   | Managed                 | both         | Prop.      |
-| [Daytona](https://daytona.io)                                                | Container (ded. kernel)               | configurable (tier-gated)     | brokered   | Both                    | pers         | AGPL       |
-| [AIO Sandbox](https://github.com/agent-infra/sandbox)                        | Container (Docker)                    | configurable (proxy)          | env-in     | Self-host               | eph          | Apache     |
-| [Modal](https://modal.com)                                                   | gVisor                                | full-by-default (cfg)         | env-in     | Managed                 | eph          | Prop.      |
-| [Beam](https://beam.cloud)                                                   | gVisor + runc                         | full-by-default (cfg)         | env-in     | Both                    | pers         | AGPL       |
-| [Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) | gVisor/Kata (pluggable)               | none (delegated)              | env-in     | Self-host (Kubernetes)  | pers         | Apache     |
-| [OpenHands](https://github.com/OpenHands/OpenHands)                          | Container (Docker)                    | none                          | env-in     | Both                    | both         | MIT        |
+| Project                                                                      | Isolation                             | Egress control                | Secrets             | Self-host / Managed     | State        | License    |
+| ---------------------------------------------------------------------------- | ------------------------------------- | ----------------------------- | ------------------- | ----------------------- | ------------ | ---------- |
+| [Cleanroom](https://github.com/buildkite/cleanroom)                          | Firecracker µVM                       | **deny-default**              | brokered            | Self-host               | eph          | MIT        |
+| [smolvm (smol-machines)](https://github.com/smol-machines/smolvm)            | libkrun µVM                           | **deny-default**              | brokered            | Self-host               | both         | Apache     |
+| [Leap0](https://leap0.dev)                                                   | Firecracker µVM                       | **deny-default** (allowlist)  | brokered            | Both                    | both         | Prop.      |
+| [InstaVM](https://instavm.io)                                                | Firecracker µVM                       | **deny-default** (allowlist)  | brokered            | Both                    | both         | Prop.      |
+| [Mitos](https://github.com/mitos-run/mitos)                                  | Firecracker µVM (Kubernetes)          | **deny-default**              | brokered            | Both                    | pers         | Apache     |
+| [ainclave](https://ainclave.com)                                             | Firecracker µVM                       | **deny-default**              | brokered[^ainclave] | Managed                 | ?            | Prop.      |
+| [Sprites (Fly.io)](https://fly.io/sprites)                                   | Firecracker µVM                       | allowlist                     | env-in              | Managed                 | pers         | Prop.      |
+| [microsandbox](https://github.com/superradcompany/microsandbox)              | libkrun µVM                           | configurable (deny opt.)      | brokered            | Self-host (+cloud beta) | pers         | Apache     |
+| [Superserve](https://superserve.ai)                                          | Firecracker µVM                       | configurable (allowlist)      | brokered            | Both                    | both         | Apache     |
+| [Islo](https://islo.dev)                                                     | Cloud Hypervisor µVM                  | configurable (allow/deny)     | brokered            | Both (BYOC)             | both         | Prop.      |
+| [Declaw](https://declaw.ai)                                                  | Firecracker µVM                       | configurable (allow/deny, L7) | brokered            | Both (BYOC)             | both         | Prop.      |
+| [OmniRun](https://omnirun.io)                                                | Firecracker µVM                       | configurable (allow/deny)     | env-in              | Both                    | eph          | Prop.      |
+| [Vercel Sandbox](https://github.com/vercel/sandbox)                          | Firecracker µVM                       | configurable (deny-all)       | brokered            | Managed                 | eph          | Prop.      |
+| [BoxLite](https://github.com/boxlite-ai/boxlite)                             | KVM/HVF µVM                           | configurable (allowlist)      | brokered            | Self-host               | pers         | Apache     |
+| [OpenComputer](https://opencomputer.dev)                                     | KVM full VM                           | configurable (allowlist, L7)  | brokered            | Both                    | pers         | Apache     |
+| [Blaxel](https://blaxel.ai)                                                  | µVM                                   | configurable (preview)        | brokered            | Managed                 | pers         | Prop.      |
+| [Qbox](https://qbox.sh)                                                      | Firecracker µVM                       | configurable                  | env-in              | Self-host               | eph          | unverified |
+| [Katakate (k7)](https://github.com/Katakate/k7)                              | Kata+FC µVM (K3s)                     | configurable (allowlist)      | env-in              | Self-host               | eph          | Apache     |
+| [AgentENV](https://github.com/kvcache-ai/AgentENV)[^agentenv]                | Firecracker µVM                       | full-by-default (cfg)         | env-in              | Self-host               | both         | MIT        |
+| [Freestyle](https://freestyle.sh)                                            | Full VM/KVM                           | configurable (on/off)         | unverified          | Managed                 | both         | Prop.      |
+| [Runloop](https://runloop.ai)                                                | VM + container                        | full-by-default (cfg)         | brokered            | Managed                 | pers         | Prop.      |
+| [E2B](https://e2b.dev)                                                       | Firecracker µVM                       | full-by-default (cfg)         | env-in              | Both                    | eph[^resume] | Apache     |
+| [Northflank](https://northflank.com)                                         | Kata+FC µVM                           | full-by-default               | env-in              | Both (BYOC)             | pers         | Prop.      |
+| [Arrakis](https://github.com/abshkbh/arrakis)                                | Cloud Hypervisor µVM                  | full-by-default               | env-in              | Self-host               | pers         | AGPL       |
+| [SmolVM (Celesto AI)](https://github.com/CelestoAI/SmolVM)                   | Firecracker+QEMU µVM                  | full-by-default (allowlist)   | env-in              | Self-host               | both         | Apache     |
+| [Morph](https://morph.so)                                                    | µVM (VMM n/s)                         | full-by-default               | env-in              | Both                    | both         | Prop.      |
+| [Tensorlake](https://tensorlake.ai)                                          | Firecracker+CH µVM                    | full-by-default (allow/deny)  | env-in              | Both (BYOC)             | both         | Prop.      |
+| [Box (ascii.dev)](https://box.ascii.dev)                                     | Linux VM                              | full-by-default               | env-in              | Managed                 | pers         | Prop.      |
+| [Novita](https://novita.ai/sandbox)                                          | Firecracker µVM                       | full-by-default               | env-in              | Managed                 | both         | Prop.      |
+| [Baponi](https://baponi.ai)                                                  | Container (seccomp+cgroups, zero-cap) | **deny-default**              | brokered            | Both                    | both         | Prop.      |
+| [OpenSandbox](https://github.com/alibaba/OpenSandbox)                        | Container (opt. gVisor/Kata/FC)       | configurable (deny avail.)    | brokered            | Self-host               | eph          | Apache     |
+| [Cloudflare Sandboxes](https://developers.cloudflare.com/sandbox/)           | VM-backed container                   | configurable (deny avail.)    | brokered            | Managed                 | both         | Prop.      |
+| [Daytona](https://daytona.io)                                                | Container (ded. kernel)               | configurable (tier-gated)     | brokered            | Both                    | pers         | AGPL       |
+| [AIO Sandbox](https://github.com/agent-infra/sandbox)                        | Container (Docker)                    | configurable (proxy)          | env-in              | Self-host               | eph          | Apache     |
+| [Modal](https://modal.com)                                                   | gVisor                                | full-by-default (cfg)         | env-in              | Managed                 | eph          | Prop.      |
+| [Beam](https://beam.cloud)                                                   | gVisor + runc                         | full-by-default (cfg)         | env-in              | Both                    | pers         | AGPL       |
+| [Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) | gVisor/Kata (pluggable)               | none (delegated)              | env-in              | Self-host (Kubernetes)  | pers         | Apache     |
+| [OpenHands](https://github.com/OpenHands/OpenHands)                          | Container (Docker)                    | none                          | env-in              | Both                    | both         | MIT        |
 
 ## What the data shows
 
-**Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
+**Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
-**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
+**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, ainclave, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
 
-**The strong-posture set** (µVM/VM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos** — plus Superserve/Islo/Declaw/OpenComputer on configurable egress. That's the bar to beat.
+**The strong-posture set** (µVM/VM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave** — plus Superserve/Islo/Declaw/OpenComputer on configurable egress. That's the bar to beat.
 
-**EU data-residency** is offered by two _managed_ entries — **Box (ascii.dev)** (DE/FI/FR) and **OmniRun** (Hetzner/DE). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 37 providers.
+**EU data-residency** is offered by three _managed_ entries — **Box (ascii.dev)** (DE/FI/FR), **OmniRun** (Hetzner/DE) and **ainclave** (bare metal, EU). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 38 providers.
 
 **Control-plane reachable from inside** (the "front desk" risk): Sprites documents an in-sandbox management API (reachable); Modal documents it is _not_. Others undocumented.
 
@@ -108,7 +108,6 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Chamber](https://github.com/cirruslabs/chamber)
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
-- [distro-rig-vps](https://github.com/shafir-info/distro-rig-vps) - Self-hosted KVM/libvirt sandbox giving coding agents guest root in disposable real-boot Linux VMs behind a constrained unprivileged host control API.
 
 ## Containers & gVisor
 
@@ -188,3 +187,4 @@ Released under [CC0-1.0](LICENSE) — public domain.
 
 [^resume]: E2B is ephemeral but supports pause/resume.
 [^agentenv]: AgentENV sources: [architecture](https://kvcache-ai.github.io/AgentENV/latest/internals/architecture.html), [networking and persistence](https://kvcache-ai.github.io/AgentENV/latest/concepts/sandboxes.html), [environment injection](https://kvcache-ai.github.io/AgentENV/latest/concepts/templates.html), and [license](https://github.com/kvcache-ai/AgentENV/blob/main/LICENSE).
+[^ainclave]: ainclave's own [docs](https://www.ainclave.com/security/microvm-isolation) describe a placeholder env var, live-substituted on the outbound request by a proxy — but that proxy runs inside the same guest as the agent process, and ainclave itself calls cross-process leakage to the agent "untested."
