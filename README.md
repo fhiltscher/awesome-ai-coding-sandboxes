@@ -56,6 +56,7 @@ _Last updated: 2026-08-09 · Actively maintained — PRs welcome._
 | [SmolVM (Celesto AI)](https://github.com/CelestoAI/SmolVM)                   | Firecracker+QEMU µVM                  | full-by-default (allowlist)   | env-in              | Self-host               | both         | Apache     |
 | [Morph](https://morph.so)                                                    | µVM (VMM n/s)                         | full-by-default               | env-in              | Both                    | both         | Prop.      |
 | [Tensorlake](https://tensorlake.ai)                                          | Firecracker+CH µVM                    | full-by-default (allow/deny)  | env-in              | Both (BYOC)             | both         | Prop.      |
+| [Runtime](https://withruntime.com)                                           | Firecracker µVM                       | full-by-default (allow/deny)  | brokered            | Managed                 | both         | Prop.      |
 | [Box (ascii.dev)](https://box.ascii.dev)                                     | Linux VM                              | full-by-default               | env-in              | Managed                 | pers         | Prop.      |
 | [Novita](https://novita.ai/sandbox)                                          | Firecracker µVM                       | full-by-default               | env-in              | Managed                 | both         | Prop.      |
 | [Baponi](https://baponi.ai)                                                  | Container (seccomp+cgroups, zero-cap) | **deny-default**              | brokered            | Both                    | both         | Prop.      |
@@ -72,7 +73,7 @@ _Last updated: 2026-08-09 · Actively maintained — PRs welcome._
 
 **Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
-**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, ainclave, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
+**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, ainclave, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Runtime, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
 
 **The strong-posture set** (µVM/VM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave** — plus Superserve/Islo/Declaw/OpenComputer on configurable egress. That's the bar to beat.
 
