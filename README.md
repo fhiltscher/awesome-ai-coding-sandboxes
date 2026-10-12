@@ -58,6 +58,7 @@ _Last updated: 2026-08-09 · Actively maintained — PRs welcome._
 | [Tensorlake](https://tensorlake.ai)                                          | Firecracker+CH µVM                    | full-by-default (allow/deny)  | env-in              | Both (BYOC)             | both         | Prop.      |
 | [Box (ascii.dev)](https://box.ascii.dev)                                     | Linux VM                              | full-by-default               | env-in              | Managed                 | pers         | Prop.      |
 | [Novita](https://novita.ai/sandbox)                                          | Firecracker µVM                       | full-by-default               | env-in              | Managed                 | both         | Prop.      |
+| [Workpaper](https://workpaper.co)                                            | VM (own kernel)                       | full-by-default[^workpaper]       | env-in              | Managed                 | pers         | Prop.      |
 | [Baponi](https://baponi.ai)                                                  | Container (seccomp+cgroups, zero-cap) | **deny-default**              | brokered            | Both                    | both         | Prop.      |
 | [OpenSandbox](https://github.com/alibaba/OpenSandbox)                        | Container (opt. gVisor/Kata/FC)       | configurable (deny avail.)    | brokered            | Self-host               | eph          | Apache     |
 | [Cloudflare Sandboxes](https://developers.cloudflare.com/sandbox/)           | VM-backed container                   | configurable (deny avail.)    | brokered            | Managed                 | both         | Prop.      |
@@ -70,13 +71,13 @@ _Last updated: 2026-08-09 · Actively maintained — PRs welcome._
 
 ## What the data shows
 
-**Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
+**Restricted-by-default egress is the minority.** Deny-by-default: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave, Baponi**; allowlist-default: **Sprites**. Sixteen offer _configurable_ egress (opt-in), and the rest ship open outbound or delegate/none (Modal, Beam, Northflank, Arrakis, Box, Morph, Tensorlake, Novita, Workpaper, Kubernetes Agent Sandbox, OpenHands). _Isolation is common; egress control is not._
 
-**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, ainclave, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
+**Secrets brokering (creds kept out of the sandbox)** is now a real cluster: Cleanroom, smolvm, Leap0, InstaVM, Mitos, ainclave, Superserve, Islo, Declaw, Vercel Sandbox, BoxLite, OpenComputer, Blaxel, microsandbox, Runloop, Baponi, OpenSandbox, Cloudflare, Daytona. Env-in: AgentENV, E2B, Modal, Northflank, Beam, Arrakis, SmolVM (Celesto), Qbox, Katakate, Sprites, Morph, Tensorlake, Box, Novita, Workpaper, AIO Sandbox, Kubernetes Agent Sandbox, OpenHands, OmniRun.
 
 **The strong-posture set** (µVM/VM **and** restricted egress **and** brokered secrets) is small: **Cleanroom, smolvm (smol-machines), Leap0, InstaVM, Mitos, ainclave** — plus Superserve/Islo/Declaw/OpenComputer on configurable egress. That's the bar to beat.
 
-**EU data-residency** is offered by three _managed_ entries — **Box (ascii.dev)** (DE/FI/FR), **OmniRun** (Hetzner/DE) and **ainclave** (bare metal, EU). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 38 providers.
+**EU data-residency** is offered by three _managed_ entries — **Box (ascii.dev)** (DE/FI/FR), **OmniRun** (Hetzner/DE) and **ainclave** (bare metal, EU). Self-hostable tools (Mitos, Cleanroom, microsandbox, smolvm, …) can additionally be run in the EU _by you_. Still a minority across 39 providers.
 
 **Control-plane reachable from inside** (the "front desk" risk): Sprites documents an in-sandbox management API (reachable); Modal documents it is _not_. Others undocumented.
 
@@ -188,3 +189,4 @@ Released under [CC0-1.0](LICENSE) — public domain.
 [^resume]: E2B is ephemeral but supports pause/resume.
 [^agentenv]: AgentENV sources: [architecture](https://kvcache-ai.github.io/AgentENV/latest/internals/architecture.html), [networking and persistence](https://kvcache-ai.github.io/AgentENV/latest/concepts/sandboxes.html), [environment injection](https://kvcache-ai.github.io/AgentENV/latest/concepts/templates.html), and [license](https://github.com/kvcache-ai/AgentENV/blob/main/LICENSE).
 [^ainclave]: ainclave's own [docs](https://www.ainclave.com/security/microvm-isolation) describe a placeholder env var, live-substituted on the outbound request by a proxy — but that proxy runs inside the same guest as the agent process, and ainclave itself calls cross-process leakage to the agent "untested."
+[^workpaper]: Workpaper sources: [own-kernel VM, not a container](https://docs.workpaper.co/how-it-works), [full outbound internet](https://docs.workpaper.co/limits) (the no-sign-up [free trial](https://docs.workpaper.co/free-trial) is limited to code/package sites and AI APIs), [secrets passed with `--env`](https://docs.workpaper.co/agents), and [stop saves disk and memory](https://docs.workpaper.co/how-it-works).
