@@ -97,6 +97,25 @@
     "position": 6,
     "item": {
       "@type": "SoftwareApplication",
+      "name": "Hotcell",
+      "url": "https://github.com/directionally-local/hotcell",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker / Apple VZ µVM isolation",
+        "deny-default (µVM) egress control",
+        "brokered secrets",
+        "Self-host",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 7,
+    "item": {
+      "@type": "SoftwareApplication",
       "name": "ainclave",
       "url": "https://ainclave.com",
       "applicationCategory": "DeveloperApplication",
@@ -111,7 +130,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 7,
+    "position": 8,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Sprites (Fly.io)",
@@ -129,7 +148,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 8,
+    "position": 9,
     "item": {
       "@type": "SoftwareApplication",
       "name": "microsandbox",
@@ -148,7 +167,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 9,
+    "position": 10,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Superserve",
@@ -167,7 +186,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 10,
+    "position": 11,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Islo",
@@ -185,7 +204,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 11,
+    "position": 12,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Declaw",
@@ -203,7 +222,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 12,
+    "position": 13,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OmniRun",
@@ -221,7 +240,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 13,
+    "position": 14,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Vercel Sandbox",
@@ -239,7 +258,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 14,
+    "position": 15,
     "item": {
       "@type": "SoftwareApplication",
       "name": "BoxLite",
@@ -258,7 +277,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 15,
+    "position": 16,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenComputer",
@@ -277,7 +296,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 16,
+    "position": 17,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Blaxel",
@@ -295,7 +314,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 17,
+    "position": 18,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Qbox",
@@ -313,7 +332,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 18,
+    "position": 19,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Katakate (k7)",
@@ -332,7 +351,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 19,
+    "position": 20,
     "item": {
       "@type": "SoftwareApplication",
       "name": "AgentENV",
@@ -351,7 +370,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 20,
+    "position": 21,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Freestyle",
@@ -369,7 +388,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 21,
+    "position": 22,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Runloop",
@@ -387,7 +406,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 22,
+    "position": 23,
     "item": {
       "@type": "SoftwareApplication",
       "name": "E2B",
@@ -406,7 +425,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 23,
+    "position": 24,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Northflank",
@@ -424,7 +443,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 24,
+    "position": 25,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Arrakis",
@@ -443,7 +462,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 25,
+    "position": 26,
     "item": {
       "@type": "SoftwareApplication",
       "name": "SmolVM (Celesto AI)",
@@ -462,7 +481,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 26,
+    "position": 27,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Morph",
@@ -480,7 +499,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 27,
+    "position": 28,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Tensorlake",
@@ -498,7 +517,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 28,
+    "position": 29,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Box (ascii.dev)",
@@ -516,7 +535,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 29,
+    "position": 30,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Novita",
@@ -534,7 +553,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 30,
+    "position": 31,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Baponi",
@@ -552,7 +571,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 31,
+    "position": 32,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenSandbox",
@@ -571,7 +590,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 32,
+    "position": 33,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Cloudflare Sandboxes",
@@ -589,7 +608,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 33,
+    "position": 34,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Daytona",
@@ -608,7 +627,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 34,
+    "position": 35,
     "item": {
       "@type": "SoftwareApplication",
       "name": "AIO Sandbox",
@@ -627,7 +646,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 35,
+    "position": 36,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Modal",
@@ -645,7 +664,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 36,
+    "position": 37,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Beam",
@@ -664,7 +683,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 37,
+    "position": 38,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Kubernetes Agent Sandbox",
@@ -683,7 +702,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 38,
+    "position": 39,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenHands",
