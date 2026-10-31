@@ -6,7 +6,7 @@ AI coding agents run arbitrary, model-generated commands. The hard part isn't sp
 
 <!-- Keep this date in sync with last_modified_at in _config.yml — it drives
      <lastmod> in sitemap.xml and dateModified in the JSON-LD graph. -->
-_Last updated: 2026-08-09 · Actively maintained — PRs welcome._
+_Last updated: 2026-10-31 · Actively maintained — PRs welcome._
 
 ## Contents
 
