@@ -109,6 +109,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Chamber](https://github.com/cirruslabs/chamber)
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
+- [Mudroom](https://github.com/Kernel-Hunter/mudroom) - Runs coding agents in a Linux micro-VM per session (Apple's `container` on Apple-silicon Macs) on a copy-on-write clone of the project, with outbound traffic limited to an allowlist proxy and an nftables firewall inside the VM; early prototype.
 
 ## Containers & gVisor
 
