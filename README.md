@@ -111,6 +111,8 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Gondolin](https://github.com/earendil-works/gondolin)
 - [Mudroom](https://github.com/Kernel-Hunter/mudroom) - Runs coding agents in a Linux micro-VM per session (Apple's `container` on Apple-silicon Macs) on a copy-on-write clone of the project, with outbound traffic limited to an allowlist proxy and an nftables firewall inside the VM; early prototype.
 
+- [Lizard Sandboxes](https://lizard.build/docs/sandboxes/#runtime-and-templates) - Managed sandboxes whose Firecracker runtime gives each sandbox its own kernel; pod-backed volumes and restored pod snapshots use a separate shared-kernel runc runtime.
+
 ## Containers & gVisor
 
 Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Containers. Verified entries are in the matrix above; additional projects:
