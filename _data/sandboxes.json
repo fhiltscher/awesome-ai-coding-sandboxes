@@ -97,25 +97,6 @@
     "position": 6,
     "item": {
       "@type": "SoftwareApplication",
-      "name": "Hotcell",
-      "url": "https://github.com/directionally-local/hotcell",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Linux",
-      "featureList": [
-        "Firecracker / Apple VZ µVM isolation",
-        "deny-default (µVM) egress control",
-        "brokered secrets",
-        "Self-host",
-        "ephemeral and persistent workspace"
-      ],
-      "license": "https://www.apache.org/licenses/LICENSE-2.0"
-    }
-  },
-  {
-    "@type": "ListItem",
-    "position": 7,
-    "item": {
-      "@type": "SoftwareApplication",
       "name": "ainclave",
       "url": "https://ainclave.com",
       "applicationCategory": "DeveloperApplication",
@@ -130,7 +111,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 8,
+    "position": 7,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Sprites (Fly.io)",
@@ -148,7 +129,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 9,
+    "position": 8,
     "item": {
       "@type": "SoftwareApplication",
       "name": "microsandbox",
@@ -167,7 +148,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 10,
+    "position": 9,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Superserve",
@@ -182,6 +163,24 @@
         "ephemeral and persistent workspace"
       ],
       "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 10,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "CreateOS Sandbox",
+      "url": "https://createos.sh/products/sandbox",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "configurable (allowlist) egress control",
+        "env-in secrets",
+        "Managed",
+        "ephemeral and persistent workspace"
+      ]
     }
   },
   {
@@ -556,6 +555,24 @@
     "position": 31,
     "item": {
       "@type": "SoftwareApplication",
+      "name": "Workpaper",
+      "url": "https://workpaper.co",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "VM (own kernel) isolation",
+        "full-by-default egress control",
+        "env-in secrets",
+        "Managed",
+        "persistent workspace"
+      ]
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 32,
+    "item": {
+      "@type": "SoftwareApplication",
       "name": "Baponi",
       "url": "https://baponi.ai",
       "applicationCategory": "DeveloperApplication",
@@ -571,7 +588,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 32,
+    "position": 33,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenSandbox",
@@ -590,7 +607,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 33,
+    "position": 34,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Cloudflare Sandboxes",
@@ -608,7 +625,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 34,
+    "position": 35,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Daytona",
@@ -627,7 +644,26 @@
   },
   {
     "@type": "ListItem",
-    "position": 35,
+    "position": 36,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "Hotcell",
+      "url": "https://github.com/directionally-local/hotcell",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Docker (default) / Firecracker / Apple VZ µVM isolation",
+        "configurable egress control",
+        "brokered secrets",
+        "Self-host",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 37,
     "item": {
       "@type": "SoftwareApplication",
       "name": "AIO Sandbox",
@@ -646,7 +682,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 36,
+    "position": 38,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Modal",
@@ -664,7 +700,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 37,
+    "position": 39,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Beam",
@@ -683,7 +719,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 38,
+    "position": 40,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Kubernetes Agent Sandbox",
@@ -702,7 +738,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 39,
+    "position": 41,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenHands",
