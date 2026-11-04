@@ -146,7 +146,7 @@ Syscall/filesystem/network restriction for individual processes, built on Bubble
 - [Capsule](https://github.com/capsulerun/capsule) - Runtime that executes agent tasks as untrusted code in isolated WebAssembly environments.
 - [AgentVM](https://github.com/deepclause/agentvm) - Node.js library running an Alpine Linux VM compiled to WebAssembly (container2wasm) in a worker thread.
 - [amla-sandbox](https://github.com/amlalabs/amla-sandbox) - WebAssembly sandbox for agent code with capability enforcement, a virtual filesystem and no network.
-- [Submilli](https://github.com/submilli/submilli-runtime) - Secure runtime for code-mode agents that runs each agent-written program in its own WebAssembly instance, started in under 1 ms, with memory, time and stack limits, no raw network or filesystem access, and default-deny rules on which operations, resources and argument values it may use.
+- [Submilli](https://github.com/submilli/submilli-runtime) - Secure runtime for code-mode agents that runs each agent-written program in its own WebAssembly instance inside the server process, with memory, time and stack limits, no raw network connection, a virtual filesystem of its own instead of the host's, and default-deny semantic permissions on which operations, resources, files and argument values it may use; early-stage (v0.5).
 
 ## Isolation building blocks
 
