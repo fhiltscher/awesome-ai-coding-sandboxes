@@ -107,9 +107,8 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Netclode](https://github.com/angristan/netclode)
 - [Chamber](https://github.com/cirruslabs/chamber)
 - [Matchlock](https://github.com/jingkaihe/matchlock)
+- [Lizard Sandboxes](https://lizard.build/sandboxes) - Managed sandboxes whose Firecracker runtime gives each sandbox its own kernel; pod-backed volumes and restored pod snapshots use a separate shared-kernel runc runtime.
 - [Gondolin](https://github.com/earendil-works/gondolin)
-
-- [Lizard Sandboxes](https://lizard.build/docs/sandboxes/#runtime-and-templates) - Managed sandboxes whose Firecracker runtime gives each sandbox its own kernel; pod-backed volumes and restored pod snapshots use a separate shared-kernel runc runtime.
 
 ## Containers & gVisor
 
