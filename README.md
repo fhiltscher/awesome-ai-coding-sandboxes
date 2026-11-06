@@ -117,6 +117,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Containers. Verified entries are in the matrix above; additional projects:
 
 - [llm-sandbox](https://github.com/vndee/llm-sandbox) - Python library that runs LLM-generated code on Docker, Podman or Kubernetes backends.
+- [Sandbox0](https://sandbox0.ai) - Managed cloud sandbox for agents using gVisor, with persistent writable RootFS checkpoints.
 - [MCP Runner](https://github.com/abir-taheer/mcp-runner) - Runs dockerized MCP servers as ephemeral, multi-tenant deployments on the gVisor runtime.
 - [Kilntainers](https://github.com/Kiln-AI/Kilntainers) - MCP server that gives every agent an ephemeral Linux container for shell commands.
 - [packnplay](https://github.com/obra/packnplay) - Launches Claude Code, Codex or Gemini in per-worktree Docker containers; no introspection or access control.
