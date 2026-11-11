@@ -174,6 +174,7 @@ Related but not untrusted-code sandboxes for coding agents:
 - [GitHub Codespaces](https://github.com/features/codespaces) - Cloud dev environments; see also [Replit](https://replit.com).
 - [Steel.dev](https://steel.dev) - Sandboxed browser sessions (not general code exec).
 - [Clusy](https://www.clusy.io) - Agent-native notebook for ML/data science; managed-only, runs agent-written cells on cloud CPU/GPU "managed cloud sandboxes". Isolation mechanism, tenant boundary and egress controls undocumented; workspace separation stated as logical only.
+- [Cloudish](https://cloudish.ai) - Managed container host for agent apps: each app is its own Kubernetes pod on worker machines shared with other tenants, sandboxed with gVisor by default (`kata` per app via `runtimeClass`), so apps don't share the host kernel; inbound only through the platform proxy, no Kubernetes credentials, default seccomp and no privilege escalation; pod-to-pod traffic is not restricted yet.
 - [ComputeSDK](https://computesdk.com) - Provider-agnostic router/SDK across sandbox backends (no own isolation); see also [VibeKit](https://docs.vibekit.sh).
 - [agentbox (madarco)](https://github.com/madarco/agentbox) - Self-hosted CLI running coding agents in parallel (Docker+FUSE / cloud VM); dev-workflow tooling on off-the-shelf isolation. MIT.
 - [Giant Swarm Agent Platform](https://www.giantswarm.io/agent-platform) - Kubernetes-based agent governance/orchestration control plane (MCP); ships no dedicated untrusted-code sandbox.
