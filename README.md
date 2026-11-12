@@ -111,6 +111,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
 - [Mudroom](https://github.com/Kernel-Hunter/mudroom) - Runs coding agents in a Linux micro-VM per session (Apple's `container` on Apple-silicon Macs) on a copy-on-write clone of the project, with outbound traffic limited to an allowlist proxy and an nftables firewall inside the VM; early prototype.
+- [kosa8](https://kosa8.com) - Gives each sandbox its own microVM and kernel (Virtualization.framework on Apple-silicon Macs, Cloud Hypervisor on KVM on Linux), with egress enforced on the host and API keys injected by a host-side broker; runs locally, on your own hosts, or on kosa8 Cloud.
 
 ## Containers & gVisor
 
