@@ -408,6 +408,25 @@
     "position": 23,
     "item": {
       "@type": "SoftwareApplication",
+      "name": "briq",
+      "url": "https://briq.cloud",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "full-by-default egress control",
+        "brokered secrets",
+        "Managed",
+        "persistent workspace"
+      ],
+      "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 24,
+    "item": {
+      "@type": "SoftwareApplication",
       "name": "E2B",
       "url": "https://e2b.dev",
       "applicationCategory": "DeveloperApplication",
@@ -424,7 +443,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 24,
+    "position": 25,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Northflank",
@@ -442,7 +461,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 25,
+    "position": 26,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Arrakis",
@@ -461,7 +480,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 26,
+    "position": 27,
     "item": {
       "@type": "SoftwareApplication",
       "name": "SmolVM (Celesto AI)",
@@ -480,7 +499,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 27,
+    "position": 28,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Morph",
@@ -498,7 +517,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 28,
+    "position": 29,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Tensorlake",
@@ -516,7 +535,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 29,
+    "position": 30,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Box (ascii.dev)",
@@ -534,7 +553,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 30,
+    "position": 31,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Novita",
@@ -552,7 +571,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 31,
+    "position": 32,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Workpaper",
@@ -570,7 +589,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 32,
+    "position": 33,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Baponi",
@@ -588,7 +607,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 33,
+    "position": 34,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenSandbox",
@@ -607,7 +626,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 34,
+    "position": 35,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Cloudflare Sandboxes",
@@ -625,7 +644,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 35,
+    "position": 36,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Daytona",
@@ -644,7 +663,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 36,
+    "position": 37,
     "item": {
       "@type": "SoftwareApplication",
       "name": "AIO Sandbox",
@@ -663,7 +682,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 37,
+    "position": 38,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Modal",
@@ -681,7 +700,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 38,
+    "position": 39,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Beam",
@@ -700,7 +719,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 39,
+    "position": 40,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Kubernetes Agent Sandbox",
@@ -719,7 +738,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 40,
+    "position": 41,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenHands",
