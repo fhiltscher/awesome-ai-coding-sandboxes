@@ -183,6 +183,7 @@ Related but not untrusted-code sandboxes for coding agents:
 - [HOL Guard](https://hol.org/guard) - Policy checks for supported AI coding-agent shell, file, package and MCP actions; no process or VM isolation.
 - [Fireactions](https://github.com/hostinger/fireactions) - GitHub-Actions runner orchestrator on Firecracker µVMs; no agent/sandbox API. Apache-2.0.
 - [dtshim](https://github.com/korableg/dtshim) - Host-command bridge for agents in Docker containers: a symlinked client forwards args, env and stdin to a host daemon over TCP or a Unix socket, which runs the command on the host, optionally restricted by a YAML allowlist policy; adds no isolation itself. MIT.
+- [ParallelSandbox](https://parallelsandbox.com/en/) - A row of in-progress test builds of your app ([FAQ](https://parallelsandbox.com/en/docs/faq/#what-can-parallelsandbox-do-for-me)). Use each one, say what's wrong and circle it on screen, and your AI makes the next version ([How it works](https://parallelsandbox.com/en/docs/how-it-works/#one-round)). That's how you iterate your user experience fast ([Give feedback](https://parallelsandbox.com/en/docs/how-it-works/#give-feedback)). Each box is its own small virtual machine with its own disk and network, isolated from the others ([FAQ](https://parallelsandbox.com/en/docs/faq/#what-does-the-architecture-look-like)); egress controls undocumented. Proprietary (MCP adapter MIT).
 
 ## Contributing
 
