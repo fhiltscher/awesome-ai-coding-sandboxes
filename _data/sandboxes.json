@@ -408,25 +408,6 @@
     "position": 23,
     "item": {
       "@type": "SoftwareApplication",
-      "name": "briq",
-      "url": "https://briq.cloud",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Linux",
-      "featureList": [
-        "Firecracker µVM isolation",
-        "full-by-default egress control",
-        "brokered secrets",
-        "Managed",
-        "persistent workspace"
-      ],
-      "license": "https://www.gnu.org/licenses/agpl-3.0.html"
-    }
-  },
-  {
-    "@type": "ListItem",
-    "position": 24,
-    "item": {
-      "@type": "SoftwareApplication",
       "name": "E2B",
       "url": "https://e2b.dev",
       "applicationCategory": "DeveloperApplication",
@@ -439,6 +420,24 @@
         "ephemeral workspace"
       ],
       "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 24,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": "briq",
+      "url": "https://briq.cloud",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Firecracker µVM isolation",
+        "full-by-default egress control",
+        "brokered secrets",
+        "Managed",
+        "persistent workspace"
+      ]
     }
   },
   {
