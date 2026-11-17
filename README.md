@@ -118,6 +118,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Containers. Verified entries are in the matrix above; additional projects:
 
 - [llm-sandbox](https://github.com/vndee/llm-sandbox) - Python library that runs LLM-generated code on Docker, Podman or Kubernetes backends.
+- [Sandbox0](https://sandbox0.ai) - Managed cloud sandbox for agents using gVisor, with persistent writable RootFS checkpoints.
 - [MCP Runner](https://github.com/abir-taheer/mcp-runner) - Runs dockerized MCP servers as ephemeral, multi-tenant deployments on the gVisor runtime.
 - [Kilntainers](https://github.com/Kiln-AI/Kilntainers) - MCP server that gives every agent an ephemeral Linux container for shell commands.
 - [packnplay](https://github.com/obra/packnplay) - Launches Claude Code, Codex or Gemini in per-worktree Docker containers; no introspection or access control.
@@ -128,6 +129,7 @@ Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Co
 - [code-on-incus](https://github.com/mensfeld/code-on-incus) - Gives each agent its own Incus system container with root, systemd and Docker inside.
 - [clawker](https://github.com/schmitthub/clawker) - Self-hosted Docker sandboxes for coding agents, running behind an egress filter.
 - [AirlockAI](https://github.com/larytet-py/AirlockAI) - Runs Claude Code in Docker containers (optional gVisor) on an internal network with no route out; the only exit is a per-session gateway that exposes approved infrastructure tools (kubectl, SSH, Jira, Airflow) and holds the credentials. Early-stage.
+- [OnlineCompiler.io](https://onlinecompiler.io) - Hosted code execution API and MCP server that runs each program in a new gVisor container with no network, a non-root user and a read-only filesystem.
 
 ## Process & namespace sandboxes
 
@@ -175,10 +177,13 @@ Related but not untrusted-code sandboxes for coding agents:
 - [GitHub Codespaces](https://github.com/features/codespaces) - Cloud dev environments; see also [Replit](https://replit.com).
 - [Steel.dev](https://steel.dev) - Sandboxed browser sessions (not general code exec).
 - [Clusy](https://www.clusy.io) - Agent-native notebook for ML/data science; managed-only, runs agent-written cells on cloud CPU/GPU "managed cloud sandboxes". Isolation mechanism, tenant boundary and egress controls undocumented; workspace separation stated as logical only.
+- [Cloudish](https://cloudish.ai) - Managed container host for agent apps: each app is its own Kubernetes pod on worker machines shared with other tenants, sandboxed with gVisor by default (`kata` per app via `runtimeClass`), so apps don't share the host kernel; inbound only through the platform proxy, no Kubernetes credentials, default seccomp and no privilege escalation; pod-to-pod traffic is not restricted yet.
 - [ComputeSDK](https://computesdk.com) - Provider-agnostic router/SDK across sandbox backends (no own isolation); see also [VibeKit](https://docs.vibekit.sh).
 - [agentbox (madarco)](https://github.com/madarco/agentbox) - Self-hosted CLI running coding agents in parallel (Docker+FUSE / cloud VM); dev-workflow tooling on off-the-shelf isolation. MIT.
 - [Giant Swarm Agent Platform](https://www.giantswarm.io/agent-platform) - Kubernetes-based agent governance/orchestration control plane (MCP); ships no dedicated untrusted-code sandbox.
+- [HOL Guard](https://hol.org/guard) - Policy checks for supported AI coding-agent shell, file, package and MCP actions; no process or VM isolation.
 - [Fireactions](https://github.com/hostinger/fireactions) - GitHub-Actions runner orchestrator on Firecracker µVMs; no agent/sandbox API. Apache-2.0.
+- [dtshim](https://github.com/korableg/dtshim) - Host-command bridge for agents in Docker containers: a symlinked client forwards args, env and stdin to a host daemon over TCP or a Unix socket, which runs the command on the host, optionally restricted by a YAML allowlist policy; adds no isolation itself. MIT.
 
 ## Contributing
 
