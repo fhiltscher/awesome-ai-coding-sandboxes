@@ -177,6 +177,7 @@ Related but not untrusted-code sandboxes for coding agents:
 - [ComputeSDK](https://computesdk.com) - Provider-agnostic router/SDK across sandbox backends (no own isolation); see also [VibeKit](https://docs.vibekit.sh).
 - [agentbox (madarco)](https://github.com/madarco/agentbox) - Self-hosted CLI running coding agents in parallel (Docker+FUSE / cloud VM); dev-workflow tooling on off-the-shelf isolation. MIT.
 - [Giant Swarm Agent Platform](https://www.giantswarm.io/agent-platform) - Kubernetes-based agent governance/orchestration control plane (MCP); ships no dedicated untrusted-code sandbox.
+- [HOL Guard](https://hol.org/guard) - Policy checks for supported AI coding-agent shell, file, package and MCP actions; no process or VM isolation.
 - [Fireactions](https://github.com/hostinger/fireactions) - GitHub-Actions runner orchestrator on Firecracker µVMs; no agent/sandbox API. Apache-2.0.
 
 ## Contributing
