@@ -6,7 +6,7 @@ AI coding agents run arbitrary, model-generated commands. The hard part isn't sp
 
 <!-- Keep this date in sync with last_modified_at in _config.yml — it drives
      <lastmod> in sitemap.xml and dateModified in the JSON-LD graph. -->
-_Last updated: 2026-10-31 · Actively maintained — PRs welcome._
+_Last updated: 2026-11-17 · Actively maintained — PRs welcome._
 
 ## Contents
 
@@ -114,10 +114,9 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 
 ## Containers & gVisor
 
-Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Containers. Verified entries are in the matrix above; additional projects:
+Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Containers. Verified entries are in the matrix above; the list below adds open-source projects not (yet) in the matrix.
 
 - [llm-sandbox](https://github.com/vndee/llm-sandbox) - Python library that runs LLM-generated code on Docker, Podman or Kubernetes backends.
-- [Sandbox0](https://sandbox0.ai) - Managed cloud sandbox for agents using gVisor, with persistent writable RootFS checkpoints.
 - [MCP Runner](https://github.com/abir-taheer/mcp-runner) - Runs dockerized MCP servers as ephemeral, multi-tenant deployments on the gVisor runtime.
 - [Kilntainers](https://github.com/Kiln-AI/Kilntainers) - MCP server that gives every agent an ephemeral Linux container for shell commands.
 - [packnplay](https://github.com/obra/packnplay) - Launches Claude Code, Codex or Gemini in per-worktree Docker containers; no introspection or access control.
@@ -128,7 +127,6 @@ Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Co
 - [code-on-incus](https://github.com/mensfeld/code-on-incus) - Gives each agent its own Incus system container with root, systemd and Docker inside.
 - [clawker](https://github.com/schmitthub/clawker) - Self-hosted Docker sandboxes for coding agents, running behind an egress filter.
 - [AirlockAI](https://github.com/larytet-py/AirlockAI) - Runs Claude Code in Docker containers (optional gVisor) on an internal network with no route out; the only exit is a per-session gateway that exposes approved infrastructure tools (kubectl, SSH, Jira, Airflow) and holds the credentials. Early-stage.
-- [OnlineCompiler.io](https://onlinecompiler.io) - Hosted code execution API and MCP server that runs each program in a new gVisor container with no network, a non-root user and a read-only filesystem.
 
 ## Process & namespace sandboxes
 
