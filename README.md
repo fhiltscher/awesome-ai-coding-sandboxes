@@ -180,6 +180,7 @@ Related but not untrusted-code sandboxes for coding agents:
 - [Giant Swarm Agent Platform](https://www.giantswarm.io/agent-platform) - Kubernetes-based agent governance/orchestration control plane (MCP); ships no dedicated untrusted-code sandbox.
 - [HOL Guard](https://hol.org/guard) - Policy checks for supported AI coding-agent shell, file, package and MCP actions; no process or VM isolation.
 - [Fireactions](https://github.com/hostinger/fireactions) - GitHub-Actions runner orchestrator on Firecracker µVMs; no agent/sandbox API. Apache-2.0.
+- [dtshim](https://github.com/korableg/dtshim) - Host-command bridge for agents in Docker containers: a symlinked client forwards args, env and stdin to a host daemon over TCP or a Unix socket, which runs the command on the host, optionally restricted by a YAML allowlist policy; adds no isolation itself. MIT.
 
 ## Contributing
 
