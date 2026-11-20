@@ -129,6 +129,7 @@ Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Co
 - [clawker](https://github.com/schmitthub/clawker) - Self-hosted Docker sandboxes for coding agents, running behind an egress filter.
 - [AirlockAI](https://github.com/larytet-py/AirlockAI) - Runs Claude Code in Docker containers (optional gVisor) on an internal network with no route out; the only exit is a per-session gateway that exposes approved infrastructure tools (kubectl, SSH, Jira, Airflow) and holds the credentials. Early-stage.
 - [OnlineCompiler.io](https://onlinecompiler.io) - Hosted code execution API and MCP server that runs each program in a new gVisor container with no network, a non-root user and a read-only filesystem.
+- [co:op](https://coop.dryga.com/claude-code-sandbox.html) - Runs Claude Code in a local Docker container with configurable file and network access.
 
 ## Process & namespace sandboxes
 
