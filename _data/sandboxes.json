@@ -647,6 +647,25 @@
     "position": 36,
     "item": {
       "@type": "SoftwareApplication",
+      "name": "Hotcell",
+      "url": "https://github.com/directionally-local/hotcell",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "featureList": [
+        "Docker (default) / Firecracker / Apple VZ µVM isolation",
+        "configurable egress control",
+        "brokered secrets",
+        "Self-host",
+        "ephemeral and persistent workspace"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 37,
+    "item": {
+      "@type": "SoftwareApplication",
       "name": "AIO Sandbox",
       "url": "https://github.com/agent-infra/sandbox",
       "applicationCategory": "DeveloperApplication",
@@ -663,7 +682,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 37,
+    "position": 38,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Modal",
@@ -681,7 +700,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 38,
+    "position": 39,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Beam",
@@ -700,7 +719,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 39,
+    "position": 40,
     "item": {
       "@type": "SoftwareApplication",
       "name": "Kubernetes Agent Sandbox",
@@ -719,7 +738,7 @@
   },
   {
     "@type": "ListItem",
-    "position": 40,
+    "position": 41,
     "item": {
       "@type": "SoftwareApplication",
       "name": "OpenHands",
