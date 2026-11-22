@@ -111,6 +111,7 @@ Strongest isolation (own kernel per sandbox), built on Firecracker, libkrun, and
 - [Matchlock](https://github.com/jingkaihe/matchlock)
 - [Gondolin](https://github.com/earendil-works/gondolin)
 - [Mudroom](https://github.com/Kernel-Hunter/mudroom) - Runs coding agents in a Linux micro-VM per session (Apple's `container` on Apple-silicon Macs) on a copy-on-write clone of the project, with outbound traffic limited to an allowlist proxy and an nftables firewall inside the VM; early prototype.
+- [LumiCloud](https://lumicloud.ai) - Managed sandboxes, each a Firecracker microVM with its own kernel, serving the E2B API so E2B's SDKs connect via `E2B_DOMAIN`; outbound network is open by default and can be limited per sandbox or account with egress rules.
 
 ## Containers & gVisor
 
