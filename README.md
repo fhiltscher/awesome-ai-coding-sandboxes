@@ -127,6 +127,7 @@ Shared-kernel isolation; faster, weaker boundary — built on gVisor and Kata Co
 - [code-on-incus](https://github.com/mensfeld/code-on-incus) - Gives each agent its own Incus system container with root, systemd and Docker inside.
 - [clawker](https://github.com/schmitthub/clawker) - Self-hosted Docker sandboxes for coding agents, running behind an egress filter.
 - [AirlockAI](https://github.com/larytet-py/AirlockAI) - Runs Claude Code in Docker containers (optional gVisor) on an internal network with no route out; the only exit is a per-session gateway that exposes approved infrastructure tools (kubectl, SSH, Jira, Airflow) and holds the credentials. Early-stage.
+- [RayTrace](https://github.com/Godcreatebugs/raytrace-cli) - Runs Claude Code or Codex in a Docker container under gVisor, inside a Lima VM; a collector outside the sandbox records commands, exit codes, file I/O, and network connections.
 
 ## Process & namespace sandboxes
 
